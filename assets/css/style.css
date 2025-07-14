@@ -612,6 +612,29 @@ body.light-mode .modal-overlay {
     margin-bottom: 2rem;
 }
 
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+    background-color: var(--border-color);
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+    background-color: var(--text-color);
+    border-radius: 2px;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 /* Tablet */
 @media(max-width: 992px) {
@@ -626,16 +649,84 @@ body.light-mode .modal-overlay {
 
 /* Mobile */
 @media(max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
     .nav-menu {
-        display: none;
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: row;
+        background-color: var(--bg-secondary);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid var(--border-color);
+        padding: 1rem 0;
+        backdrop-filter: blur(10px);
+        z-index: 999;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .nav-item {
+        margin: 0 0.5rem;
+        padding: 0.5rem 0;
+        border-bottom: none;
+    }
+    
+    .nav-item:last-child {
+        border-bottom: none;
+        margin-top: 0;
+        padding-top: 0.5rem;
+        border-top: none;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 0.5rem 0.8rem;
+        display: block;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+    
+    .nav-link:hover {
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 8px;
+        margin: 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
     }
     
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        line-height: 1.2;
+        padding: 0 1rem;
+        word-wrap: break-word;
     }
     
     .hero-content p {
         font-size: 1rem;
+        padding: 0 1rem;
     }
     
     .about-content {

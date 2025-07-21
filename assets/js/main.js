@@ -177,30 +177,20 @@ window.addEventListener('scroll', () => {
 
 // Contact form functionality
 const contactForm = document.getElementById('contact-form');
-const modalContainer = document.getElementById('success-modal');
-const closeModalBtn = document.getElementById('close-modal-btn');
-const modalOverlay = document.querySelector('.modal-overlay');
-
-// Function to show modal
-function showModal() { 
-    modalContainer.classList.add('show'); 
+if (contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const nameInput = contactForm.querySelector('input[name="name"]');
+        const messageInput = contactForm.querySelector('textarea[name="message"]');
+        const name = nameInput ? nameInput.value.trim() : '';
+        const message = messageInput ? messageInput.value.trim() : '';
+        if (name.length === 0 || message.length === 0) {
+            alert('Nama dan pesan harus diisi!');
+            return;
+        }
+        const phoneNumber = '6289666077720'; // Nomor tujuan WhatsApp
+        const text = `Halo, saya ${name} ingin mengirim pesan: ${message}`;
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+        window.open(url, '_blank');
+    });
 }
-
-// Function to close modal
-function closeModal() { 
-    modalContainer.classList.remove('show'); 
-}
-
-// Contact form submit event
-contactForm.addEventListener('submit', function(event) { 
-    event.preventDefault(); 
-    showModal(); 
-    contactForm.reset(); 
-    setTimeout(() => { 
-        closeModal(); 
-    }, 4000); 
-});
-
-// Close modal event listeners
-closeModalBtn.addEventListener('click', closeModal);
-modalOverlay.addEventListener('click', closeModal); 

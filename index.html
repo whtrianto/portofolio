@@ -74,6 +74,11 @@
             <div class="container">
                 <h2 class="section-title" data-aos="fade-up">Fokus Pembelajaran Saya</h2>
                 <div class="card-container">
+                    <div class="card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Pengembangan Front-End</h3>
+                        <p>Mendesain tampilan website yang interaktif dan responsif menggunakan HTML, CSS, dan JavaScript agar pengalaman pengguna semakin optimal.</p>
+                    </div>
                     <div class="card" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon"><i class="fas fa-server"></i></div>
                         <h3>Pengembangan Back-End</h3>
@@ -84,7 +89,7 @@
                         <h3>Pemrograman Python</h3>
                         <p>Mendalami logika pemrograman, struktur data, dan machine learning sebagai fondasi utama pengembangan solusi cerdas.</p>
                     </div>
-                    <div class="card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card" data-aos="fade-up" data-aos-delay="400">
                         <div class="icon"><i class="fas fa-database"></i></div>
                         <h3>Manajemen Database</h3>
                         <p>Belajar merancang, membuat query, dan mengelola database relasional menggunakan MySQL untuk penyimpanan data yang terstruktur.</p>
@@ -256,9 +261,6 @@
                                     <input type="text" name="name" class="form-control" placeholder="Nama Anda" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control" placeholder="Email Anda" required>
-                                </div>
-                                <div class="form-group">
                                     <textarea name="message" class="form-control" placeholder="Pesan Anda" required></textarea>
                                 </div>
                                 <br>
@@ -285,5 +287,29 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.getElementById('contact-form');
+        if(form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var nameInput = form.querySelector('input[name="name"]');
+                var messageInput = form.querySelector('textarea[name="message"]');
+                var name = nameInput ? nameInput.value.trim() : '';
+                var message = messageInput ? messageInput.value.trim() : '';
+                // Debug log
+                console.log('Nama:', name, '| Pesan:', message);
+                if (name.length === 0 || message.length === 0) {
+                    alert('Nama dan pesan harus diisi!');
+                    return;
+                }
+                var phoneNumber = '6289666077720'; // Nomor tujuan WhatsApp
+                var text = `Halo, saya ${name} ingin mengirim pesan: ${message}`;
+                var url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+                window.open(url, '_blank');
+            });
+        }
+    });
+    </script>
 </body>
 </html>

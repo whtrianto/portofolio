@@ -304,7 +304,7 @@
                     return;
                 }
                 var phoneNumber = '6289666077720'; // Nomor tujuan WhatsApp
-                var text = `Halo, saya ${name} ingin mengirim pesan: ${message}`;
+                var text = `Halo, saya ${name}, ingin menyampaikan: ${message}`;
                 var url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
                 window.open(url, '_blank');
             });

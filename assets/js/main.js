@@ -103,7 +103,7 @@ const lightParticlesConfig = {
             value: 50 
         },
         color: { 
-            value: "#0d6efd" // warna biru lebih gelap agar lebih jelas di background terang
+            value: "#fd990d" // warna biru lebih gelap agar lebih jelas di background terang
         },
         links: {
             ...darkParticlesConfig.particles.links,

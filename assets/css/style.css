@@ -1,10 +1,10 @@
 /* ===== CSS VARIABLES ===== */
 :root {
-    --bg-color: #191009;
-    --bg-secondary: #3b2a1e;
+    --bg-color: #0f0919;
+    --bg-secondary: #281e3b;
     --text-color: #e2e8f0;
     --text-secondary: #94a3b8;
-    --primary-color: #f8a838;
+    --primary-color: #3868f8;
     --border-color: rgba(255, 255, 255, 0.1);
     --shadow-color: rgba(0, 0, 0, 0.3);
     --success-color: #28a745;
@@ -83,7 +83,7 @@ main, header, footer {
     left: 0;
     width: 100%;
     padding: 1rem 0;
-    background: rgba(42, 24, 15, 0.8);
+    background: #281e3b;
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid var(--border-color);

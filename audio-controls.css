@@ -1,0 +1,307 @@
+/* 🎵 AUDIO CONTROLS STYLES */
+
+/* Audio Toggle Button */
+.audio-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ea8b66 0%, #a29f4b 100%);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio-toggle-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.audio-toggle-btn.active {
+    background: linear-gradient(135deg, #93fbf7 0%, #f5576c 100%);
+    transform: scale(1.1);
+}
+
+/* Audio Controls Panel */
+.audio-controls-panel {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Audio Controls Header */
+.audio-controls-header {
+    background: linear-gradient(135deg, #ea8b66 0%, #a29f4b 100%);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.audio-controls-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.audio-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.audio-close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Audio Controls Content */
+.audio-controls-content {
+    padding: 20px;
+}
+
+.audio-control-group {
+    margin-bottom: 20px;
+}
+
+.audio-control-group:last-child {
+    margin-bottom: 0;
+}
+
+.audio-control-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Volume Control */
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.volume-slider {
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background: #e0e0e0;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ea8b66 0%, #a29f4b 100%);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ea8b66 0%, #a29f4b 100%);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.volume-value {
+    min-width: 40px;
+    text-align: right;
+    font-weight: 600;
+    color: #ea8b66;
+    font-size: 14px;
+}
+
+/* Mute Button */
+.mute-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #ea8b66 0%, #a29f4b 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.mute-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.mute-btn.muted {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.mute-btn.muted:hover {
+    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+}
+
+.mute-icon {
+    font-size: 16px;
+}
+
+.mute-text {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .audio-toggle-btn {
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+    
+    .audio-controls-panel {
+        top: 70px;
+        right: 15px;
+        width: 280px;
+    }
+    
+    .audio-controls-header {
+        padding: 12px 15px;
+    }
+    
+    .audio-controls-header h3 {
+        font-size: 15px;
+    }
+    
+    .audio-controls-content {
+        padding: 15px;
+    }
+    
+    .audio-control-group {
+        margin-bottom: 15px;
+    }
+    
+    .volume-control {
+        gap: 10px;
+    }
+    
+    .volume-slider {
+        height: 5px;
+    }
+    
+    .volume-slider::-webkit-slider-thumb {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .volume-slider::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .audio-controls-panel {
+        width: 260px;
+        right: 10px;
+    }
+    
+    .audio-controls-content {
+        padding: 12px;
+    }
+    
+    .audio-control-group label {
+        font-size: 13px;
+    }
+    
+    .volume-value {
+        font-size: 13px;
+        min-width: 35px;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .audio-controls-panel {
+        background: rgba(30, 30, 30, 0.95);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .audio-control-group label {
+        color: #e0e0e0;
+    }
+    
+    .volume-slider {
+        background: #444;
+    }
+    
+    .volume-value {
+        color: #8b9eff;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .audio-toggle-btn {
+        border: 2px solid white;
+    }
+    
+    .audio-controls-panel {
+        border: 2px solid #333;
+    }
+    
+    .volume-slider {
+        border: 1px solid #333;
+    }
+}

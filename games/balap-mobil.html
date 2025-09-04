@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balap Mobil - ZentrixFun</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../audio-controls.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-container">
+            <h1>Balap Mobil</h1>
+            <p>Hindari mobil lawan di jalan raya! Kumpulkan power-up, tingkatkan kecepatan, dan capai skor tertinggi!</p>
+            
+            <div class="game-info">
+                <p>Skor Tertinggi: <span id="highScore">0</span></p>
+                <p>Skor: <span id="score">0</span></p>
+                <p>Kecepatan: <span id="speed">1.0x</span></p>
+                <p>Status: <span id="gameStatus">Siap Balap!</span></p>
+            </div>
+
+            <canvas id="gameCanvas" width="400" height="600"></canvas>
+            
+            <div class="game-controls">
+                <p>Gunakan panah kiri/kanan atau A/D untuk bergerak. Spasi untuk mulai.</p>
+                <button id="startButton" class="btn">Mulai Game</button>
+                <button id="restartButton" class="btn" style="display: none;">Main Lagi</button>
+            </div>
+
+            <!-- Mobile Controls untuk Balap Mobil -->
+            <div class="mobile-breakout-controls">
+                <div class="control-stick-container">
+                    <div class="stick-base">
+                        <button id="leftButton" class="control-btn control-left">←</button>
+                        <button id="rightButton" class="control-btn control-right">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h3>Keterangan Power-up:</h3>
+                <ul style="text-align: center; max-width: 480px; margin: 0 auto; list-style: none; padding: 0;">
+                    <li style="margin: 6px 0;">
+                        <span style="color: #00ff88; font-weight: bold;">🛡️ Shield (Hijau): 🟩 </span> Kebal tabrakan sementara.
+                    </li>
+                    <li style="margin: 6px 0;">
+                        <span style="color: #00b4ff; font-weight: bold;">🐌 Slow (Biru): 🟦 </span> Lalu lintas melambat sebentar.
+                    </li>
+                    <li style="margin: 6px 0;">
+                        <span style="color: #ffd700; font-weight: bold;">⭐ +Score (Emas): 🟨 </span> Tambah +5 skor instan.
+                    </li>
+                </ul>
+            </div>
+
+            <a href="../index.html" class="back-link">Kembali ke Home</a>
+        </div>
+    </div>
+
+    <script src="../js/balap-mobil.js"></script>
+    <script src="../js/audio-manager-with-demo.js"></script>
+    <script src="../js/audio-controls.js"></script>
+    <script src="../js/audio-integration-helper.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.audioControls) {
+                window.audioControls.setContainer(document.querySelector('.game-container'));
+            }
+        });
+    </script>
+</body>
+</html>

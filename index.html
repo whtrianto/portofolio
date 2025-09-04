@@ -3,381 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Wahyu Trianto - RevoU Student</title>
-    <link rel="icon" href="assets/img/logo3.png" type="image/x-icon">
-    <!-- Google Fonts, Font Awesome, AOS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    
+    <title>ZentrixFun - Mainkan Game Seru!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="audio-controls.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="particles-js"></div>
-    <header class="header">
-        <nav class="navbar container">
-            <a href="#home" class="logo">Wahyu<span>Trianto</span></a>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">Tentang</a></li>
-                <li class="nav-item"><a href="#learning" class="nav-link">Fokus Belajar</a></li>
-                <li class="nav-item"><a href="#portfolio" class="nav-link">Portofolio</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Kontak</a></li>
-                <li class="nav-item">
-                    <div class="theme-switch-wrapper">
-                        <label class="theme-switch" for="checkbox">
-                            <input type="checkbox" id="checkbox" />
-                            <div class="slider round">
-                                <i class="fas fa-moon"></i>
-                                <i class="fas fa-sun"></i>
-                            </div>
-                        </label>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1 data-aos="fade-down">Halo, Saya <span class="highlight">Wahyu Trianto</span></h1>
-                <p data-aos="fade-up" data-aos-delay="200">Seorang Software Engineer & Desain Grafis</p>
-                <!-- <div data-aos="fade-up" data-aos-delay="400">
-                    <a href="assets/img/CV_WahyuTrianto.pdf" download="CV_WahyuTrianto.pdf" class="btn btn-primary">Download CV</a>
-                </div> -->
-            </div>
-        </section>
-        <section id="about" class="section">
-            <div class="container">
-                <div class="card" data-aos="fade-up">
-                    <h2 class="section-title">Tentang Saya</h2>
-                    <div class="about-content">
-                        <div data-aos="fade-right" data-aos-delay="200">
-                            <img src="assets/img/123.jpg" alt="Wahyu Trianto" class="about-image">
-                        </div>
-                        <div class="about-text" data-aos="fade-left" data-aos-delay="400">
-                            <p>Saya adalah seorang profesional di bidang Teknologi Informasi dengan pengalaman dalam pengembangan perangkat lunak, pembuatan website, dan solusi digital. Saya memiliki keahlian dalam berbagai teknologi modern dan berkomitmen untuk memberikan hasil terbaik dalam setiap proyek yang saya kerjakan.</p>
-                            <p>Portofolio ini menampilkan beberapa karya dan pencapaian saya sebagai bukti dedikasi dan kemampuan di dunia IT. Saya selalu antusias untuk mempelajari hal baru, beradaptasi dengan perkembangan teknologi, dan siap berkontribusi dalam proyek-proyek inovatif di masa depan.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="learning" class="section">
-            <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Fokus Pembelajaran Saya</h2>
-                <div class="card-container">
-                    <div class="card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="icon"><i class="fas fa-laptop-code"></i></div>
-                        <h3>Pengembangan Front-End</h3>
-                        <p>Mendesain tampilan website yang interaktif dan responsif menggunakan HTML, CSS, dan JavaScript agar pengalaman pengguna semakin optimal.</p>
-                    </div>
-                    <div class="card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="icon"><i class="fas fa-server"></i></div>
-                        <h3>Pengembangan Back-End</h3>
-                        <p>Membangun logika sisi server, API, dan mengelola alur data untuk aplikasi yang andal dan efisien menggunakan PHP.</p>
-                    </div>
-                    <div class="card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="icon"><i class="fab fa-python"></i></div>
-                        <h3>Pemrograman Python</h3>
-                        <p>Mendalami logika pemrograman, struktur data, dan machine learning sebagai fondasi utama pengembangan solusi cerdas.</p>
-                    </div>
-                    <div class="card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="icon"><i class="fas fa-database"></i></div>
-                        <h3>Manajemen Database</h3>
-                        <p>Belajar merancang, membuat query, dan mengelola database relasional menggunakan MySQL untuk penyimpanan data yang terstruktur.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Teknologi yang Pernah Saya Pelajari</h2>
-                <div class="card-container">
-                    <div class="card" data-aos="zoom-in" data-aos-delay="100">
-                        <i class="fab fa-html5"></i>
-                        <h3>HTML5</h3>
-                    </div>
-                    <div class="card" data-aos="zoom-in" data-aos-delay="200">
-                        <i class="fab fa-css3-alt"></i>
-                        <h3>CSS3</h3>
-                    </div>
-                    <div class="card" data-aos="zoom-in" data-aos-delay="300">
-                        <i class="fab fa-js-square"></i>
-                        <h3>JavaScript</h3>
-                    </div>
-                    <div class="card" data-aos="zoom-in" data-aos-delay="400">
-                        <i class="fab fa-php"></i>
-                        <h3>PHP</h3>
-                    </div>
-                    <div class="card" data-aos="zoom-in" data-aos-delay="500">
-                        <i class="fas fa-database"></i>
-                        <h3>MySQL</h3>
-                    </div>
-                    <div class="card" data-aos="zoom-in" data-aos-delay="600">
-                        <i class="fab fa-python"></i>
-                        <h3>Python</h3>
-                    </div>
-                    <div class="card" data-aos="zoom-in" data-aos-delay="700">
-                        <i class="fab fa-figma"></i>
-                        <h3>Figma</h3>
-                    </div>
-                    <div class="card" data-aos="zoom-in" data-aos-delay="800">
-                        <i class="fab fa-git-alt"></i>
-                        <h3>Git</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="portfolio" class="section">
-            <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Portofolio Proyek Saya</h2>
-                <div class="card-container">
-                    <div class="card project-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="assets/img/logo1.png" alt="Sistem Pakar Diagnosa Disleksia" class="project-image">
-                        <div class="project-content">
-                            <h3>Zentrix Kreasi</h3>
-                            <p style="text-align: justify;">Sebuah perusahaan yang bergerak di bidang kreatif, khususnya dalam bidang desain grafis dan pembuatan website.</p>
-                            <div class="project-tags">
-                                <span class="tag">#HTML</span>
-                                <span class="tag">#CSS</span>
-                                <span class="tag">#JavaScript</span>
-                                <span class="tag">#Company</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://zentrix-kreasi.vercel.app" class="project-link" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <!-- <a href="https://github.com/whtrianto/zentrix" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Kode GitHub</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card project-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="https://www.devopsschool.com/blog/wp-content/uploads/2023/07/image-604-1024x512.png" alt="Sistem Pakar Diagnosa Disleksia" class="project-image">
-                        <div class="project-content">
-                            <h3>Sistem Pakar Diagnosa Disleksia</h3>
-                            <p style="text-align: justify;">Proyek membangun sistem pakar untuk membantu mendiagnosa gejala disleksia, menerapkan metode Forward Chaining dan Certainty Factor.</p>
-                            <div class="project-tags">
-                                <span class="tag">#PHP</span>
-                                <span class="tag">#MySQL</span>
-                                <span class="tag">#Sistem Pakar</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://siabid.informatika.ump.ac.id" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <!-- <a href="https://github.com/whtrianto/dyslexia-diagnosis" class="project-link"><i class="fab fa-github"></i> Kode GitHub</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card project-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="https://media.istockphoto.com/id/2165523325/id/video/pasien-di-kantor-dokter-spanduk-bergerak-dengan-pria-berkonsultasi-dengan-terapis-atau-staf.jpg?s=640x640&k=20&c=bQ6WZC0v5JNDuNRAwh6SapatBnHGSOC5RI870lV133U=" alt="Sistem Pakar Diagnosa Disleksia" class="project-image">
-                        <div class="project-content">
-                            <h3>Klinik</h3>
-                            <p style="text-align: justify;">Sebuah website yang berisi informasi tentang klinik, dokter, dan layanan yang ditawarkan.</p>
-                            <div class="project-tags">
-                                <span class="tag">#HTML</span>
-                                <span class="tag">#CSS</span>
-                                <span class="tag">#JavaScript</span>
-                                <span class="tag">#Clinic</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://zentrix-kreasi.vercel.app/ariyanto.html" class="project-link" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <!-- <a href="https://github.com/whtrianto/profile-klinik" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Kode GitHub</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card project-card" data-aos="fade-up" data-aos-delay="400">
-                        <img src="https://png.pngtree.com/background/20250216/original/pngtree-stack-of-folded-knitted-sweaters-on-yellow-background-comfortable-clothes-wash-picture-image_15569017.jpg" alt="Sistem Pakar Diagnosa Disleksia" class="project-image">
-                        <div class="project-content">
-                            <h3>Toko Rajutan</h3>
-                            <p style="text-align: justify;">Sebuah website yang berisi informasi tentang toko rajut, produk, dan layanan yang ditawarkan.</p>
-                            <div class="project-tags">
-                                <span class="tag">#HTML</span>
-                                <span class="tag">#CSS</span>
-                                <span class="tag">#JavaScript</span>
-                                <span class="tag">#Company</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://zentrix-kreasi.vercel.app/bubay.html" class="project-link" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <!-- <a href="https://github.com/whtrianto/profile-toko-rajut" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Kode GitHub</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card project-card" data-aos="fade-up" data-aos-delay="500">
-                        <img src="https://ugm.ac.id/wp-content/uploads/2024/03/cows-eating-lush-grass-green-field-front-fuji-mountain-japan.jpg" alt="Sistem Pakar Diagnosa Disleksia" class="project-image">
-                        <div class="project-content">
-                            <h3>Perternakan</h3>
-                            <p style="text-align: justify;">Sebuah website yang berisi informasi tentang perternakan, produk, dan layanan yang ditawarkan.</p>
-                            <div class="project-tags">
-                                <span class="tag">#HTML</span>
-                                <span class="tag">#CSS</span>
-                                <span class="tag">#JavaScript</span>
-                                <span class="tag">#Company</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://pembuatan-websites.vercel.app" class="project-link" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <!-- <a href="https://github.com/whtrianto/profile-toko-rajut" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Kode GitHub</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card project-card" data-aos="fade-up" data-aos-delay="600">
-                        <img src="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Website Wedding" class="project-image">
-                        <div class="project-content">
-                            <h3>Website Undangan Pernikahan Digital</h3>
-                            <p style="text-align: justify;">Membuat website undangan pernikahan digital yang interaktif dan responsif, dilengkapi dengan katalog produk, keranjang belanja, dan manajemen pesanan.</p>
-                            <div class="project-tags">
-                                <span class="tag">#HTML</span>
-                                <span class="tag">#CSS</span>
-                                <span class="tag">#JavaScript</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://fanifita-wedding.vercel.app/?kepada=Di+tempat" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <!-- <a href="https://github.com/whtrianto/f-f-wedding" class="project-link"><i class="fab fa-github"></i> Kode GitHub</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card project-card" data-aos="fade-up" data-aos-delay="700">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFvVJHo9yIva5jSn7UddOBO1HuDIZy91ybfRhjziXTmxSfcS7KtS1vY7qwA-PekYEQ8g_PYVIHfUpi5oDc7LAEuJMIc4Qg9AHNBkk3EEEErU6l7xnY2RHklcCCMeadgU3iIKzwSypmxkg/s1600/Ripe+vs.+Unripe+Bananas+Which+are+Better+for+You+-+Fort+Lauderdale+Personal+Chef.jpg" alt="Klasifikasi Kematangan Pisang" class="project-image">
-                        <div class="project-content">
-                            <h3>Klasifikasi Tingkat Kematangan Pisang</h3>
-                            <p style="text-align: justify;">Implementasi model machine learning untuk mengklasifikasikan tingkat kematangan pisang berdasarkan gambar, menggunakan algoritma KNN.</p>
-                            <div class="project-tags">
-                                <span class="tag">#Python</span>
-                                <span class="tag">#KNN</span>
-                                <span class="tag">#MachineLearning</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/whtrianto/klasifikasi-buah-pisang" class="project-link"><i class="fab fa-github"></i> Kode GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card project-card" data-aos="fade-up" data-aos-delay="800">
-                        <img src="https://png.pngtree.com/thumb_back/fh260/background/20240731/pngtree-furniture-shop-with-colorful-background-image_16121667.jpg" alt="Website Penjualan Toko Mebel" class="project-image">
-                        <div class="project-content">
-                            <h3>Website E-Commerce Toko Mebel</h3>
-                            <p style="text-align: justify;">Membangun platform e-commerce fungsional untuk toko mebel, lengkap dengan fitur RSVP, galeri foto, dan peta lokasi acara untuk memudahkan tamu undangan.</p>
-                            <div class="project-tags">
-                                <span class="tag">#PHP</span>
-                                <span class="tag">#MySQL</span>
-                                <span class="tag">#E-commerce</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://toko-mebel.co.id" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <!-- <a href="https://github.com/whtrianto/toko-mebel" class="project-link"><i class="fab fa-github"></i> Kode GitHub</a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Bagian Kontak yang Dirombak -->
-        <section id="contact" class="section">
-            <div class="container">
-                <div class="card" data-aos="fade-up">
-                    <h2 class="section-title">Mari Terhubung!</h2>
-                    <!-- Wrapper untuk layout 2 kolom -->
-                    <div class="contact-wrapper">
-                        <!-- Kolom Kiri: Informasi Kontak -->
-                        <div class="contact-info">
-                            <ul>
-                                <li class="info-item">
-                                    <i class="fas fa-map-marker-alt info-icon"></i>
-                                    <div>
-                                        <h4>Lokasi</h4>
-                                        <p><a href="https://www.google.com/maps/place/Banjarnegara,+Jawa+Tengah" style="text-decoration: none;" target="_blank" rel="noopener">Banjarnegara, Indonesia</a></p>
-                                    </div>
-                                </li>
-                                <li class="info-item">
-                                    <i class="fas fa-envelope info-icon"></i>
-                                    <div>
-                                        <h4>Email</h4>
-                                        <p><a href="mailto:wahyutri1771@gmail.com" style="text-decoration: none;">wahyutri1771@gmail.com</a></p>
-                                    </div>
-                                </li>
-                                <li class="info-item">
-                                    <i class="fas fa-phone info-icon"></i>
-                                    <div>
-                                        <h4>Nomor HP</h4>
-                                        <p><a href="tel:+6289666077720" style="text-decoration: none;">+62 896-6607-7720</a></p>
-                                    </div>
-                                </li>
-                                <li class="info-item">
-                                    <i class="fas fa-graduation-cap info-icon"></i>
-                                    <div>
-                                        <h4>Edukasi</h4>
-                                        <p><a href="https://www.ump.ac.id" style="text-decoration: none;" target="_blank" rel="noopener">Universitas Muhammadiyah Purwokerto</a></p>
-                                    </div>
-                                </li>
-                                <li class="info-item">
-                                    <i class="fas fa-globe info-icon"></i>
-                                    <div>
-                                        <h4>Bahasa</h4>
-                                        <p>Indonesia, Inggris, Jawa</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Kolom Kanan: Form Kontak -->
-                        <div class="form-wrapper" style="text-align: center;">
-                            <h3>Kirim Pesan</h3>
-                            <form id="contact-form">
-                                <div class="form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="Nama Anda" required>
-                                </div>
-                                <div class="form-group">
-                                    <textarea name="message" class="form-control" placeholder="Pesan Anda" required></textarea>
-                                </div>
-                                <br>
-                                <button type="submit" class="btn btn-primary">Kirim Pesan</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <p>&copy; Wahyu Trianto 2025 <span class="heart">|</span> Portofolio</p>
-    </footer>
-    <div id="success-modal" class="modal-container">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <div class="icon"><i class="fas fa-check-circle"></i></div>
-            <h2>Pesan Terkirim!</h2>
-            <p>Terima kasih telah menghubungi saya. Saya akan segera merespon pesan Anda.</p>
-            <button id="close-modal-btn" class="btn btn-primary">Tutup</button>
+    <header>
+        <div class="container">
+            <h1>ZentrixFun</h1>
+            <p>Destinasi Utama untuk Game Browser Sederhana & Menghibur</p>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var form = document.getElementById('contact-form');
-        if(form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                var nameInput = form.querySelector('input[name="name"]');
-                var messageInput = form.querySelector('textarea[name="message"]');
-                var name = nameInput ? nameInput.value.trim() : '';
-                var message = messageInput ? messageInput.value.trim() : '';
-                // Debug log
-                console.log('Nama:', name, '| Pesan:', message);
-                if (name.length === 0 || message.length === 0) {
-                    alert('Nama dan pesan harus diisi!');
-                    return;
-                }
-                var phoneNumber = '6289666077720'; // Nomor tujuan WhatsApp
-                var text = `Halo, saya ${name}, ingin menyampaikan: ${message}`;
-                var url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
-                window.open(url, '_blank');
-            });
-        }
-    });
-    </script>
+    </header>
+
+    <main class="container">
+        <div class="main-header">
+            <div class="floating-icons">
+                <div class="floating-icon">🎮</div>
+                <div class="floating-icon">🎯</div>
+                <div class="floating-icon">🏆</div>
+                <div class="floating-icon">⭐</div>
+            </div>
+            <h2 class="main-title">
+                <span class="title-text">Pilih Game Favoritmu</span>
+                <div class="title-underline"></div>
+            </h2>
+            <p class="main-subtitle">10 Game Seru yang Siap Dimainkan!</p>
+        </div>
+
+        <div class="game-list">
+            <!-- Game Card 1: Number Guessing -->
+            <div class="game-card" data-game="number">
+                <div class="card-glow"></div>
+                <div class="card-icon">🔢</div>
+                <h3>Tebak Angka</h3>
+                <p>Uji keberuntungan dan logikamu! Komputer memilih angka rahasia, bisakah kamu menebaknya dalam 5 percobaan?</p>
+                <div class="card-features">
+                    <span class="feature">🎲 Random</span>
+                    <span class="feature">🧠 Logika</span>
+                    <span class="feature">⚡ Cepat</span>
+                </div>
+                <a href="games/number-guessing.html" class="btn">
+                    <span class="btn-text">Mainkan Sekarang</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- Game Card 2: Rock Paper Scissors -->
+            <div class="game-card" data-game="rps">
+                <div class="card-glow"></div>
+                <div class="card-icon">✂️</div>
+                <h3>Batu, Kertas, Gunting</h3>
+                <p>Game klasik sepanjang masa. Kalahkan komputer dalam pertarungan strategi dan keberuntungan. Skor tertinggimu akan disimpan!</p>
+                <div class="card-features">
+                    <span class="feature">🏆 Skor</span>
+                    <span class="feature">🎯 Strategi</span>
+                    <span class="feature">💾 Simpan</span>
+                </div>
+                <a href="games/rock-paper-scissors.html" class="btn">
+                    <span class="btn-text">Mainkan Sekarang</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- Game Card 3: Memory Game -->
+            <div class="game-card" data-game="memory">
+                <div class="card-glow"></div>
+                <div class="card-icon">🧠</div>
+                <h3>Memory Card</h3>
+                <p>Latih ingatanmu dengan mencari semua pasangan kartu yang cocok. Semakin cepat, semakin baik!</p>
+                <div class="card-features">
+                    <span class="feature">🧠 Ingatan</span>
+                    <span class="feature">⏱️ Waktu</span>
+                    <span class="feature">🎴 Kartu</span>
+                </div>
+                <a href="games/memory-game.html" class="btn">
+                    <span class="btn-text">Mainkan Sekarang</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- Game Card 4: Snake Game -->
+            <div class="game-card" data-game="snake">
+                <div class="card-glow"></div>
+                <div class="card-icon">🐍</div>
+                <h3>Snake Game</h3>
+                <p>Game klasik arcade! Kendalikan ular dan makan makanan untuk tumbuh lebih panjang. Hindari dinding dan tubuhmu sendiri!</p>
+                <div class="card-features">
+                    <span class="feature">🎮 Arcade</span>
+                    <span class="feature">🍎 Makanan</span>
+                    <span class="feature">📈 Skor</span>
+                </div>
+                <a href="games/snake-game.html" class="btn">
+                    <span class="btn-text">Mainkan Sekarang</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- Game Card 5: Tic Tac Toe -->
+            <div class="game-card" data-game="tictactoe">
+                <div class="card-glow"></div>
+                <div class="card-icon">❌⭕</div>
+                <h3>Tic Tac Toe</h3>
+                <p>Game strategi klasik! Mainkan melawan teman atau komputer. Siapa yang bisa membuat garis 3 simbol terlebih dahulu?</p>
+                <div class="card-features">
+                    <span class="feature">🎮 Multiplayer</span>
+                    <span class="feature">🎯 Strategi</span>
+                    <span class="feature">⚔️ Duel</span>
+                </div>
+                <a href="games/tic-tac-toe.html" class="btn">
+                    <span class="btn-text">Mainkan Sekarang</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- Game Card 6: Color Match -->
+            <div class="game-card" data-game="color">
+                <div class="card-glow"></div>
+                <div class="card-icon">🎨</div>
+                <h3>Color Match</h3>
+                <p>Uji refleksmu! Klik warna yang sama dengan yang ditampilkan. Semakin cepat, semakin tinggi skormu!</p>
+                <div class="card-features">
+                    <span class="feature">⚡ Refleks</span>
+                    <span class="feature">🎨 Warna</span>
+                    <span class="feature">🏃 Cepat</span>
+                </div>
+                <a href="games/color-match.html" class="btn">
+                    <span class="btn-text">Mainkan Sekarang</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- Game Card 7: Cyber Bird -->
+            <div class="game-card" data-game="cyberbird">
+                <div class="card-glow"></div>
+                <div class="card-icon">🐦</div>
+                <h3>Cyber Bird</h3>
+                <p>Game terbang cyberpunk! Hindari pipa dan rintangan dengan kontrol yang smooth. Terbang setinggi mungkin!</p>
+                <div class="card-features">
+                    <span class="feature">🦅 Terbang</span>
+                    <span class="feature">🎯 Hindari</span>
+                    <span class="feature">🏆 Skor</span>
+                </div>
+                <a href="games/flappy-bird.html" class="btn">
+                    <span class="btn-text">Mainkan Sekarang</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- Game Card 8: 2048 Puzzle -->
+            <div class="game-card" data-game="puzzle">
+                <div class="card-glow"></div>
+                <div class="card-icon">🧩</div>
+                <h3>2048 Puzzle</h3>
+                <p>Game puzzle matematika yang adiktif! Gabungkan tile yang sama untuk mencapai 2048. Fitur undo tersedia!</p>
+                <div class="card-features">
+                    <span class="feature">🧮 Matematika</span>
+                    <span class="feature">↩️ Undo</span>
+                    <span class="feature">🎯 Strategi</span>
+                </div>
+                <a href="games/2048-puzzle.html" class="btn">
+                    <span class="btn-text">Mainkan Sekarang</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- Game Card 9: Cyber Breakout -->
+            <div class="game-card" data-game="breakout">
+                <div class="card-glow"></div>
+                <div class="card-icon">🏓</div>
+                <h3>Cyber Breakout</h3>
+                <p>Game arcade klasik dengan twist modern! Hancurkan blok dengan bola dan paddle. Power-ups menanti!</p>
+                <div class="card-features">
+                    <span class="feature">🏓 Arcade</span>
+                    <span class="feature">⚡ Power-ups</span>
+                    <span class="feature">📈 Level</span>
+                </div>
+                <a href="games/breakout.html" class="btn">
+                    <span class="btn-text">Mainkan Sekarang</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+
+            <!-- Game Card 10: Balap Mobil -->
+            <div class="game-card" data-game="carrace">
+                <div class="card-glow"></div>
+                <div class="card-icon">🚘</div>
+                <h3>Balap Mobil</h3>
+                <p>Hindari mobil lawan di jalan raya! Kumpulkan power-up, tingkatkan kecepatan, dan capai skor tertinggi!</p>
+                <div class="card-features">
+                    <span class="feature">🏎️ Kecepatan</span>
+                    <span class="feature">🎯 Hindari</span>
+                    <span class="feature">🏆 Skor</span>
+                </div>
+                <a href="games/balap-mobil.html" class="btn">
+                    <span class="btn-text">Mainkan Sekarang</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-footer">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Game Seru</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">Jam Bermain Kapan Saja</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Gratis</div>
+                </div>
+            </div>
+            <div class="cta-section">
+                <h3>Mau Game Lainnya?</h3>
+                <p>Tunggu unggahan game selanjutnya!</p>
+                <div class="coming-soon">
+                    <span class="coming-soon-text">Coming Soon...</span>
+                    <div class="pulse-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://portofolio-wahyu-trianto.vercel.app/" style="text-decoration: none; color: white;">
+            <p class="glow-copyright">&copy; 2025 Wahyu Trianto.</p>
+        </a>
+    </footer>
+
+    <!-- Audio Manager Scripts -->
+    <script src="js/audio-manager-with-demo.js"></script>
+    <!-- <script src="js/audio-controls.js"></script> -->
+    <script src="js/audio-test-helper.js"></script>
+    <script src="js/audio-integration-helper.js"></script>
+    <script src="js/quick-audio-test.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>

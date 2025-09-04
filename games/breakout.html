@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Cyber Breakout - RevoFun</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../audio-controls.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-container">
+            <h1>Cyber Breakout</h1>
+            <p>Hancurkan semua blok dengan bola dan paddle! Gunakan mouse untuk menggerakkan paddle. Hindari bola jatuh!</p>
+            
+            <h3 style="color: #e3c61e;">Skor Tertinggi: <span id="highScore">0</span></h3>
+            <div class="game-info">
+                <p>Skor: <span id="score">0</span></p>
+                <p>Level: <span id="level">1</span></p>
+                <p>Nyawa: <span id="lives">5</span></p>
+                <p>Status: <span id="gameStatus">Siap Main!</span></p>
+            </div>
+
+            <canvas id="gameCanvas" width="800" height="500"></canvas>
+            
+            <div class="game-controls">
+                <p>Gunakan mouse untuk menggerakkan paddle</p>
+                <button id="startButton" class="btn">Mulai Game</button>
+                <button id="restartButton" class="btn" style="display: none;">Main Lagi</button>
+            </div>
+
+            <!-- Mobile Controls untuk Breakout Game -->
+            <div class="mobile-breakout-controls">
+                <div class="control-stick-container">
+                    <button id="launchButton" class="control-btn control-launch">🚀</button>
+                    <div class="stick-base">
+                        <button id="leftButton" class="control-btn control-left">←</button>
+                        <button id="rightButton" class="control-btn control-right">→</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="instructions">
+                <h3>Cara Bermain:</h3>
+                <ul style="text-align: center; max-width: 400px; margin: 0 auto;">
+                    <li>Gerakkan mouse untuk mengendalikan paddle</li>
+                    <li>Di mobile, gunakan tombol kiri/kanan atau swipe gesture</li>
+                    <li>Hancurkan semua blok untuk naik level</li>
+                    <li>Jangan biarkan bola jatuh!</li>
+                    <li>Power-ups akan muncul saat bermain</li>
+                </ul>
+                
+                <div class="power-ups-info" style="margin-top: 20px;">
+                    <h4>Jenis Power-ups:</h4>
+                    <ul style="text-align: center; max-width: 500px; margin: 0 auto; list-style: none; padding: 0;">
+                         <li><span style="color: #FF6B6B; font-weight: bold;">🟥 Merah:</span> Tambah 1 nyawa ❤️</li>
+                         <li><span style="color: #FFD700; font-weight: bold;">🟨 Kuning:</span> Mempercepat bola ⚡</li>
+                         <li><span style="color: #4ECDC4; font-weight: bold;">🟦 Biru:</span> Memperlambat bola 🐌</li>
+                         <li><span style="color: #0cef85; font-weight: bold;">🟩 Hijau:</span> Memperlebar paddle 📏</li>
+                         <li><span style="color: #b300ff; font-weight: bold;">🟪 Ungu:</span> Memperkecil paddle 🔪</li>
+                     </ul>
+                </div>
+            </div>
+
+            <a href="../index.html" class="back-link">Kembali ke Home</a>
+        </div>
+    </div>
+    <script src="../js/breakout.js"></script>
+
+    <!-- Audio Manager Scripts -->
+    <script src="../js/audio-manager-with-demo.js"></script>
+    <script src="../js/audio-controls.js"></script>
+    <script src="../js/audio-integration-helper.js"></script>
+    <script>
+        // Initialize audio for breakout
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set audio controls container to game container
+            if (window.audioControls) {
+                window.audioControls.setContainer(document.querySelector('.game-container'));
+            }
+            
+            // Background music will be started by audio-integration-helper on first user gesture
+        });
+    </script>
+</body>
+</html>

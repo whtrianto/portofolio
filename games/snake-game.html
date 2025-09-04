@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Snake Game - RevoFun</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../audio-controls.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-container">
+            <h1>Snake Game</h1>
+            <p>Kendalikan ular dengan tombol panah! Makan makanan untuk tumbuh lebih panjang. Hindari dinding dan tubuhmu sendiri!</p>
+            
+            <div class="snake-game-info">
+                <p>Skor: <span id="score">0</span></p>
+                <p>Panjang: <span id="length">1</span></p>
+                <p>Status: <span id="gameStatus">Siap Main</span></p>
+            </div>
+
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            
+            <div class="game-controls">
+                <p>Gunakan tombol panah untuk mengendalikan ular</p>
+                <button id="startButton" class="btn">Mulai Game</button>
+                <button id="restartButton" class="btn" style="display: none;">Main Lagi</button>
+            </div>
+            <br>
+
+            <!-- Mobile Controls untuk Snake Game -->
+            <div class="mobile-snake-controls">
+                <div class="control-stick-container">
+                    <div class="stick-base">
+                        <div class="d-pad">
+                            <button id="upButton" class="control-btn control-up">↑</button>
+                            <button id="leftButton" class="control-btn control-left">←</button>
+                            <button id="rightButton" class="control-btn control-right">→</button>
+                            <button id="downButton" class="control-btn control-down">↓</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="instructions">
+                <h3>Cara Bermain:</h3>
+                <ul style="text-align: center; max-width: 400px; margin: 0 auto;">
+                    <li>Gunakan tombol panah (←, ↑, →, ↓) atau (w, a, s, d) untuk mengendalikan ular</li>
+                    <li>Di mobile, gunakan tombol kontrol virtual di bawah game</li>
+                </ul>
+            </div>
+
+            <a href="../index.html" class="back-link">Kembali ke Home</a>
+        </div>
+    </div>
+    <!-- Audio Manager Scripts -->
+    <script src="../js/audio-manager-with-demo.js"></script>
+    <script src="../js/audio-controls.js"></script>
+    <script src="../js/snake-game.js"></script>
+    <script src="../js/audio-integration-helper.js"></script>
+    <script>
+        // Initialize audio for Snake Game
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set audio controls container to game container
+            if (window.audioControls) {
+                window.audioControls.setContainer(document.querySelector('.game-container'));
+            }
+            
+            // Background music will be started by audio-integration-helper on first user gesture
+        });
+    </script>
+</body>
+</html>

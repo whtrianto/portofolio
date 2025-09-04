@@ -1,124 +1,66 @@
-# Portfolio Website - Wahyu Trianto
+# RevoFun - Landing Page Perusahaan Game
 
-## Overview
+Selamat datang di RevoFun! Proyek ini adalah sebuah landing page interaktif untuk perusahaan game fiktif yang menyediakan akses ke 6 game sederhana berbasis JavaScript. Proyek ini dibuat untuk menunjukkan kemampuan dalam pengembangan web front-end, khususnya manipulasi DOM dan logika game dengan JavaScript.
 
-This is my personal portfolio website showcasing my journey as a Software Engineering student at RevoU Tech Academy. The website features a modern, responsive design with interactive elements and showcases my projects, skills, and learning focus.
+**Demo Langsung:** [Link ke Website Anda yang sudah di-deploy]
 
-## Features
+## 📜 Gambaran Umum Proyek
 
-### Core Sections
-- **Home**: Hero section with introduction and CV download
-- **About**: Personal background and current learning journey
-- **Learning Focus**: Areas of study (Backend Development, Python, Database Management)
-- **Skills**: Technologies I've learned (HTML5, CSS3, JavaScript, PHP, MySQL, Python, Figma, Git)
-- **Portfolio**: Showcase of my projects with live demos and GitHub links
-- **Contact**: Contact form and personal information
+Tujuan utama proyek ini adalah menciptakan sebuah platform online yang menarik bagi pemain kasual. Landing page ini tidak hanya memperkenalkan brand "RevoFun", tetapi juga berfungsi sebagai portal untuk memainkan game browser yang ringan dan menghibur.
 
-### Interactive Features
-- **Dark/Light Theme Toggle**: Switch between themes with animated icons
-- **Smooth Scrolling Navigation**: Responsive navigation with active state indicators
-- **AOS Animations**: Scroll-triggered animations for enhanced user experience
-- **Particles.js Background**: Interactive particle system for visual appeal
-- **Contact Form**: Functional contact form with success modal
-- **Responsive Design**: Mobile-first approach with modern CSS
+## ✨ Fitur yang Diimplementasikan
 
-## Technologies Used
+- **Halaman Utama (Home Page)**:
 
-### Frontend
-- **HTML5**: Semantic structure and accessibility
-- **CSS3**: Modern styling with Flexbox, Grid, and animations
-- **JavaScript**: Interactive functionality and form handling
-- **Font Awesome**: Icon library for UI elements
-- **Google Fonts**: Poppins font family for typography
+  - Perkenalan visual perusahaan dengan desain yang menarik.
+  - Daftar game yang tersedia dengan deskripsi singkat.
+  - Navigasi yang mudah ke halaman game masing-masing.
 
-### Libraries & Frameworks
-- **AOS (Animate On Scroll)**: Scroll-triggered animations
-- **Particles.js**: Interactive background particles
-- **Font Awesome 6.4.0**: Icon library
+- **Game yang Tersedia (6 Game)**:
 
-### Development Tools
-- **Git**: Version control
-- **GitHub Pages**: Deployment platform
+  1.  **Tebak Angka**: Pemain mencoba menebak angka rahasia yang dipilih komputer dengan petunjuk "Terlalu tinggi" atau "Terlalu rendah" dalam batas percobaan.
+  2.  **Batu, Kertas, Gunting**: Game klasik melawan komputer. Proyek ini menyertakan fitur opsional penyimpanan skor dan nickname menggunakan `localStorage`.
+  3.  **Memory Card Game**: Pemain harus menemukan semua pasangan kartu yang cocok di papan permainan, melatih daya ingat dan konsentrasi.
+  4.  **Snake Game**: Game arcade klasik! Kendalikan ular dan makan makanan untuk tumbuh lebih panjang. Hindari dinding dan tubuhmu sendiri!
+  5.  **Tic Tac Toe**: Game strategi klasik melawan AI komputer. Siapa yang bisa membuat garis 3 simbol terlebih dahulu?
+  6.  **Color Match**: Uji refleksmu! Klik warna yang sama dengan yang ditampilkan. Semakin cepat, semakin tinggi skormu!
 
-## Project Structure
+- **Desain Responsif**: Tampilan website dapat beradaptasi dengan baik di berbagai ukuran layar, mulai dari desktop hingga mobile.
 
-```
-w1/
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── main.js
-│   └── img/
-│       ├── 123.jpg
-│       ├── 7847.jpg
-│       └── CV_WahyuTrianto.pdf
-├── index.html
-├── style.css
-└── README.md
-```
+- **Pengalaman Pengguna**: Antarmuka yang bersih, navigasi intuitif, dan gameplay yang lancar untuk memastikan pengalaman yang menyenangkan.
 
-## Key Projects Showcased
+## 🛠️ Teknologi yang Digunakan
 
-1. **Sistem Pakar Diagnosa Disleksia**
-   - PHP & MySQL based expert system
-   - Forward Chaining and Certainty Factor methods
-   - Live demo available
+- **HTML5**: Untuk struktur konten website.
+- **CSS3**: Untuk styling dan layout.
+  - **Flexbox & Grid**: Untuk tata letak yang modern dan responsif.
+  - **CSS Variables**: Untuk manajemen tema yang mudah.
+  - **Google Fonts**: Untuk tipografi yang menarik.
+- **JavaScript (ES6+)**:
+  - Manipulasi DOM untuk membuat gameplay interaktif.
+  - Event Listeners untuk menangani input dari pengguna.
+  - Conditional Statements, Loops, Functions, Arrays, dan Objects untuk membangun logika game.
+  - `localStorage` untuk menyimpan data seperti skor dan nickname pengguna.
 
-2. **Website E-Commerce Toko Mebel**
-   - Full-featured e-commerce platform
-   - Product catalog, shopping cart, order management
-   - PHP & MySQL implementation
+## 🚀 Cara Menjalankan Proyek Secara Lokal
 
-3. **Klasifikasi Tingkat Kematangan Pisang**
-   - Machine learning project using Python
-   - KNN algorithm for banana ripeness classification
-   - Computer vision application
+1.  **Clone repositori ini:**
+    ```bash
+    git clone https://github.com/username-anda/revofun-landing-page.git
+    ```
+2.  **Masuk ke direktori proyek:**
+    ```bash
+    cd revofun-landing-page
+    ```
+3.  **Buka file `index.html` di browser Anda.**
+    - Anda bisa langsung mengklik dua kali file `index.html` atau menggunakan ekstensi seperti "Live Server" di Visual Studio Code.
 
-## Design Features
+## 📸 Screenshot
 
-- **Modern UI/UX**: Clean, professional design with smooth animations
-- **Responsive Layout**: Works seamlessly on desktop, tablet, and mobile
-- **Accessibility**: Semantic HTML and proper ARIA labels
-- **Performance**: Optimized assets and efficient code structure
-- **Cross-browser Compatibility**: Tested across modern browsers
+_(Di sini Anda bisa menambahkan screenshot dari halaman utama dan setiap game)_
 
-## Getting Started
+**Halaman Utama:**
+![Screenshot Halaman Utama](link-ke-screenshot-anda.jpg)
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/revou-fsse-jun25/milestone-1-whtrianto.git
-   ```
-
-2. **Open the project**:
-   - Navigate to the project directory
-   - Open `index.html` in your web browser
-   - Or use a local server for development
-
-3. **Customize**:
-   - Update personal information in `index.html`
-   - Modify styles in `assets/css/style.css`
-   - Add new projects to the portfolio section
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Contributing
-
-This is a personal portfolio project, but suggestions and feedback are welcome!
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## Contact
-
-- **Email**: wahyutri1771@gmail.com
-- **Phone**: +62 896-6607-7720
-- **Location**: Banjarnegara, Indonesia
-- **Education**: Universitas Muhammadiyah Purwokerto
-
+**Game Tebak Angka:**
+![Screenshot Game Tebak Angka](link-ke-screenshot-anda.jpg)

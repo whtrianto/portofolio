@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tebak Angka - RevoFun</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../audio-controls.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-container">
+            <h1>Tebak Angka</h1>
+            <p>Aku sedang memikirkan sebuah angka antara 1 dan 100. Kamu punya 8 kali kesempatan untuk menebaknya!</p>
+            
+            <input type="number" id="guessInput" min="1" max="100" placeholder="Masukkan tebakanmu...">
+            <button id="guessButton" class="btn">Tebak!</button>
+
+            <p id="message">Semoga beruntung!</p>
+            <p id="attempts">Sisa percobaan: 8</p>
+
+            <!-- Riwayat Tebakan -->
+            <div id="historyContainer" style="margin: 20px 0; padding: 20px; background: rgba(22, 33, 62, 0.85); border-radius: 15px; border: 2px solid #ffea00; display: none; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+                <h4 style="color: #ffea00; font-family: 'Press Start 2P', cursive; font-size: 1rem; margin-bottom: 15px; text-shadow: 0 0 10px #ffea00;">📝 Riwayat Tebakan</h4>
+                <div id="guessHistory" style="max-height: 200px; overflow-y: auto; font-family: 'Roboto', sans-serif; font-size: 14px; padding: 10px; background: rgba(10, 10, 20, 0.5); border-radius: 8px; border: 1px solid rgba(255, 234, 0, 0.3);"></div>
+            </div>
+
+            <button id="restartButton" class="btn" style="display: none;">Main Lagi</button><br>
+            
+            <!-- Audio Test Button
+            <div style="margin: 20px 0; padding: 15px; background: #f0f0f0; border-radius: 8px;">
+                <h4>🎵 Test Audio Effects:</h4>
+                <button onclick="testAudio('click')" class="btn" style="margin: 5px;">Click Sound</button>
+                <button onclick="testAudio('hover')" class="btn" style="margin: 5px;">Hover Sound</button>
+                <button onclick="testAudio('correct')" class="btn" style="margin: 5px;">Correct Sound</button>
+                <button onclick="testAudio('wrong')" class="btn" style="margin: 5px;">Wrong Sound</button>
+                <button onclick="testAudio('victory')" class="btn" style="margin: 5px;">Victory Sound</button>
+                <button onclick="testAudio('defeat')" class="btn" style="margin: 5px;">Defeat Sound</button>
+                <button onclick="testAudio('move')" class="btn" style="margin: 5px;">Move Sound</button>
+            </div> -->
+            
+            <a href="../index.html" class="back-link">Kembali ke Home</a>
+        </div>
+    </div>
+    <script src="../js/number-guessing.js"></script>
+
+    <!-- Audio Manager Scripts -->
+    <script src="../js/audio-manager-with-demo.js"></script>
+    <script src="../js/audio-controls.js"></script>
+    <script src="../js/audio-integration-helper.js"></script>
+    <script>
+        // Initialize audio for number-guessing
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set audio controls container to game container
+            if (window.audioControls) {
+                window.audioControls.setContainer(document.querySelector('.game-container'));
+            }
+            
+            // Background music will be started by audio-integration-helper on first user gesture
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - RevoFun</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../audio-controls.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-container">
+            <h1>Tic Tac Toe</h3>
+            <p>Game strategi klasik! Mainkan melawan komputer. Siapa yang bisa membuat garis 3 simbol terlebih dahulu?</p>
+            
+            <div class="game-info">
+                <p>Pemain: <span id="currentPlayer">X</span></p>
+                <p>Status: <span id="gameStatus">Giliranmu!</span></p>
+            </div>
+
+            <div class="board-container">
+                <div class="board" id="board">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+            </div>
+            
+            <div class="game-controls">
+                <button id="newGameButton" class="btn">Game Baru</button>
+                <!-- <button id="resetButton" style="margin-left: 10px;" class="btn">Reset Game</button> -->
+            </div>
+
+            <div class="game-history" style="margin-top: 16px;">
+                <div class="history-header">
+                    <h3>Riwayat Pemenang</h3>
+                    <div class="history-stats">
+                        <span class="stat stat-x">X: <strong id="xWinsCount">0</strong></span>
+                        <span class="stat stat-o">O: <strong id="oWinsCount">0</strong></span>
+                        <!-- <span class="stat stat-draw">Seri: <strong id="drawsCount">0</strong></span> -->
+                    </div>
+                </div>
+                <ul id="winnerHistory" class="winner-list"></ul>
+                <br>
+                <button id="resetHistoryButton" class="btn" style="margin-top: 8px;">Reset Riwayat</button>
+            </div>
+
+            <a href="../index.html" class="back-link">Kembali ke Home</a>
+        </div>
+    </div>
+    <!-- Audio Manager Scripts -->
+    <script src="../js/audio-manager-with-demo.js"></script>
+    <script src="../js/audio-controls.js"></script>
+    <script src="../js/tic-tac-toe.js"></script>
+    <script src="../js/audio-integration-helper.js"></script>
+    <script>
+        // Initialize audio for Tic Tac Toe Game
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set audio controls container to game container
+            if (window.audioControls) {
+                window.audioControls.setContainer(document.querySelector('.game-container'));
+            }
+            
+            // Background music will be started by audio-integration-helper on first user gesture
+        });
+    </script>
+</body>
+</html>

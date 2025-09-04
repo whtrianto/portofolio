@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batu, Kertas, Gunting - RevoFun</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../audio-controls.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-container">
+            <h1>Batu, Kertas, Gunting</h1>
+            <p>Masukkan nama panggilanmu dan pilih jagoanmu untuk melawan komputer!</p>
+            
+            <div>
+                <input type="text" id="nicknameInput" placeholder="Masukkan Nickname">
+                <button id="saveNickname" class="btn">Simpan</button>
+            </div>
+<br>
+            <!-- Versus Panel -->
+            <div style="display:flex;align-items:center;justify-content:center;gap:18px;margin:10px 0 20px 0;">
+                <div style="background: rgba(22,33,62,0.85);border:2px solid var(--primary-color);border-radius:12px;padding:12px 16px;min-width:90px;text-align:center;">
+                    <div style="font-size:28px;line-height:1;" id="player-emoji">❔</div>
+                    <div style="font-size:12px;color:var(--text-color);opacity:.8;margin-top:6px;" id="player-tag">Pemain</div>
+                </div>
+                <div style="font-family: var(--font-pixel); color: var(--secondary-color); text-shadow: 0 0 10px var(--secondary-color);">VS</div>
+                <div style="background: rgba(22,33,62,0.85);border:2px solid var(--primary-color);border-radius:12px;padding:12px 16px;min-width:90px;text-align:center;">
+                    <div style="font-size:28px;line-height:1;" id="computer-emoji">❔</div>
+                    <div style="font-size:12px;color:var(--text-color);opacity:.8;margin-top:6px;">Komputer</div>
+                </div>
+            </div>
+
+            <h3 id="result-message">Pilih salah satu!</h3><br>
+            <div class="choices">
+                <button data-choice="batu">✊</button>
+                <button data-choice="kertas">✋</button>
+                <button data-choice="gunting">✌️</button>
+            </div>
+
+            <div class="results">
+                <p>Pilihanmu: <span id="player-choice">-</span></p>
+                <p>Pilihan Komputer: <span id="computer-choice">-</span></p>
+            </div>
+
+
+            <div class="score-board">
+                <h3>Skor</h3>
+                <p><span id="nicknameDisplay">Pemain</span>: <span id="player-score">0</span> | Komputer: <span id="computer-score">0</span></p>
+                <div style="margin-top:10px;">
+                    <button id="resetScores" class="btn">Reset Skor</button>
+                </div>
+            </div>
+            
+            <!-- Round History -->
+            <div style="margin-top:20px;background: rgba(22,33,62,0.85);border:2px solid var(--primary-color);border-radius:12px;padding:12px;">
+                <h4 style="color:var(--primary-color);margin-bottom:8px;">Riwayat Ronde</h4>
+                <ul id="rpsHistory" style="list-style:none;padding:0;margin:0;max-height:160px;overflow:auto;font-size:14px;">
+                </ul>
+            </div>
+            
+            <a href="../index.html" class="back-link">Kembali ke Home</a>
+        </div>
+    </div>
+    <!-- Audio Manager Scripts (load dulu agar tersedia untuk game JS) -->
+    <script src="../js/audio-manager-with-demo.js"></script>
+    <script src="../js/audio-controls.js"></script>
+    <script src="../js/audio-integration-helper.js"></script>
+    
+    <!-- Game Script -->
+    <script src="../js/rock-paper-scissors.js"></script>
+    <script>
+        // Initialize audio for rock-paper-scissors
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set audio controls container to game container
+            if (window.audioControls) {
+                window.audioControls.setContainer(document.querySelector('.game-container'));
+            }
+
+            // Background music will be started by audio-integration-helper on first user gesture
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game - RevoFun</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../audio-controls.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-container">
+            <h1>Memory Card Game</h1>
+            <p>Balikkan kartu dan temukan semua pasangan yang cocok. Uji daya ingatmu!</p>
+
+            <div class="game-info">
+                <div class="info-item">
+                    <span class="info-label">Langkah:</span>
+                    <span class="info-value" id="moves">0</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Pasangan:</span>
+                    <span class="info-value" id="pairs">0/8</span>
+                </div>
+            </div>
+
+            <div class="memory-grid" id="memoryGrid">
+                <!-- Kartu akan dibuat oleh JavaScript -->
+            </div>
+            
+            <div class="mobile-controls">
+                <button id="restartButton" class="btn">Mulai Ulang</button>
+                <button id="hintButton" class="btn btn-hint">💡 Petunjuk (2)</button>
+            </div>
+            
+            <a href="../index.html" class="back-link">Kembali ke Home</a>
+        </div>
+    </div>
+    <!-- Audio Manager Scripts (load dulu agar tersedia untuk game JS) -->
+    <script src="../js/audio-manager-with-demo.js"></script>
+    <script src="../js/audio-controls.js"></script>
+    <script src="../js/audio-integration-helper.js"></script>
+
+    <!-- Game Script -->
+    <script src="../js/memory-game.js"></script>
+    <script>
+        // Initialize audio for memory-game
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set audio controls container to game container
+            if (window.audioControls) {
+                window.audioControls.setContainer(document.querySelector('.game-container'));
+            }
+
+            // Background music will be started by audio-integration-helper on first user gesture
+        });
+    </script>
+</body>
+</html>

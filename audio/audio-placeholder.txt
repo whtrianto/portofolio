@@ -1,0 +1,30 @@
+🎵 AUDIO FILES PLACEHOLDER
+
+File-file ini adalah placeholder untuk audio yang dibutuhkan.
+Untuk mendapatkan audio yang sebenarnya, Anda perlu:
+
+1. Download audio dari sumber gratis seperti:
+   - Freesound.org
+   - OpenGameArt.org
+   - Zapsplat.com
+
+2. Atau buat sendiri menggunakan:
+   - Audacity (gratis)
+   - GarageBand (Mac)
+   - FL Studio
+
+3. Pastikan format MP3 dengan:
+   - Bitrate: 128-192 kbps
+   - Sample Rate: 44.1 kHz
+   - Durasi: 1-3 menit untuk musik, 0.5-3 detik untuk efek
+
+4. Rename file sesuai dengan yang ada di AudioManager:
+   - snake-background.mp3
+   - tictactoe-background.mp3
+   - game-start.mp3
+   - click.mp3
+   - dll.
+
+5. Letakkan semua file MP3 di direktori audio/ ini
+
+Setelah file audio tersedia, musik akan otomatis bisa diputar!

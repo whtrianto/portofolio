@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Bird - RevoFun</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../audio-controls.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-container">
+            <h1>Cyber Bird</h1>
+            <p>Terbanglah melewati rintangan cyberpunk! Gunakan spasi atau klik untuk terbang. Hindari semua hambatan!</p>
+            
+            <div class="game-info">
+                <p>Skor Tertinggi: <span id="highScore">0</span></p>
+                <p>Skor: <span id="score">0</span></p>
+                <p>Status: <span id="gameStatus">Siap Terbang!</span></p>
+            </div>
+
+            <canvas id="gameCanvas" width="800" height="400"></canvas>
+            
+            <div class="game-controls">
+                <p>Gunakan SPASI, KLIK, atau tombol JUMP untuk terbang</p>
+                <button id="startButton" class="btn">Mulai Game</button>
+                <button id="restartButton" class="btn" style="display: none;">Main Lagi</button>
+                <button id="jumpButton" class="btn jump-btn" style="display: none;">JUMP!</button>
+            </div>
+
+            <div class="instructions">
+                <h3>Cara Bermain:</h3>
+                <ul style="text-align: center; max-width: 400px; margin: 0 auto;">
+                    <li>Tekan SPASI, KLIK, atau tombol JUMP untuk terbang</li>
+                    <li>Hindari pipa dan rintangan</li>
+                    <li>Setiap pipa = 1 poin</li>
+                    <li>Terbang setinggi mungkin!</li>
+                </ul>
+            </div>
+
+            <a href="../index.html" class="back-link">Kembali ke Home</a>
+        </div>
+    </div>
+    <script src="../js/flappy-bird.js"></script>
+
+    <!-- Audio Manager Scripts -->
+    <script src="../js/audio-manager-with-demo.js"></script>
+    <script src="../js/audio-controls.js"></script>
+    <script src="../js/audio-integration-helper.js"></script>
+    <script>
+        // Initialize audio for flappy-bird
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set audio controls container to game container
+            if (window.audioControls) {
+                window.audioControls.setContainer(document.querySelector('.game-container'));
+            }
+            
+            // Background music will be started by audio-integration-helper on first user gesture
+        });
+    </script>
+</body>
+</html>

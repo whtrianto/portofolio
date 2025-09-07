@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Profesional - Wahyu Trianto</title>
+    <title>Professional Portfolio - Wahyu Trianto</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -336,12 +336,28 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <h1 class="text-2xl font-bold gold-gradient playfair">WT</h1>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link text-white hover:text-yellow-400">Beranda</a>
-                    <a href="#about" class="nav-link text-white hover:text-yellow-400">Tentang</a>
-                    <a href="#skills" class="nav-link text-white hover:text-yellow-400">Keahlian</a>
-                    <a href="#projects" class="nav-link text-white hover:text-yellow-400">Proyek</a>
-                    <a href="#contact" class="nav-link text-white hover:text-yellow-400">Kontak</a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="nav-link text-white hover:text-yellow-400" data-i18n="nav_home">Home</a>
+                    <a href="#about" class="nav-link text-white hover:text-yellow-400" data-i18n="nav_about">About</a>
+                    <a href="#skills" class="nav-link text-white hover:text-yellow-400" data-i18n="nav_skills">Skills</a>
+                    <a href="#projects" class="nav-link text-white hover:text-yellow-400" data-i18n="nav_projects">Projects</a>
+                    <a href="#contact" class="nav-link text-white hover:text-yellow-400" data-i18n="nav_contact">Contact</a>
+                    <select id="languageSelect" class="bg-black/40 text-white border border-gray-600 rounded px-2 py-1">
+                        <div class="text-black">
+                        <option value="en" selected>English</option>
+                        <option value="id">Indonesian</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="pt">Português</option>
+                        <option value="it">Italiano</option>
+                        <option value="nl">Nederlands</option>
+                        <option value="ru">Русский</option>
+                        <option value="ja">日本語</option>
+                        <option value="ko">한국어</option>
+                        <option value="ar">العربية</option>
+                        </div>
+                    </select>
                 </div>
                 <button class="md:hidden text-white" id="mobileMenuBtn">
                     <i class="fas fa-bars text-2xl"></i>
@@ -352,11 +368,28 @@
         <!-- Mobile Menu -->
         <div class="hidden md:hidden bg-black/90" id="mobileMenu">
             <div class="px-6 py-4 space-y-4">
-                <a href="#home" class="block text-white hover:text-yellow-400">Beranda</a>
-                <a href="#about" class="block text-white hover:text-yellow-400">Tentang</a>
-                <a href="#skills" class="block text-white hover:text-yellow-400">Keahlian</a>
-                <a href="#projects" class="block text-white hover:text-yellow-400">Proyek</a>
-                <a href="#contact" class="block text-white hover:text-yellow-400">Kontak</a>
+                <a href="#home" class="block text-white hover:text-yellow-400" data-i18n="nav_home">Home</a>
+                <a href="#about" class="block text-white hover:text-yellow-400" data-i18n="nav_about">About</a>
+                <a href="#skills" class="block text-white hover:text-yellow-400" data-i18n="nav_skills">Skills</a>
+                <a href="#projects" class="block text-white hover:text-yellow-400" data-i18n="nav_projects">Projects</a>
+                <a href="#contact" class="block text-white hover:text-yellow-400" data-i18n="nav_contact">Contact</a>
+                <div class="pt-2">
+                    <label for="languageSelectMobile" class="sr-only">Language</label>
+                    <select id="languageSelectMobile" class="w-full bg-black/40 text-white border border-gray-600 rounded px-2 py-2">
+                        <option value="en" selected>English</option>
+                        <option value="id">Bahasa Indonesia</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="pt">Português</option>
+                        <option value="it">Italiano</option>
+                        <option value="nl">Nederlands</option>
+                        <option value="ru">Русский</option>
+                        <option value="ja">日本語</option>
+                        <option value="ko">한국어</option>
+                        <option value="ar">العربية</option>
+                    </select>
+                </div>
             </div>
         </div>
     </nav>
@@ -365,20 +398,20 @@
     <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20">
         <div class="text-center max-w-4xl mx-auto">
             <h2 class="text-5xl md:text-7xl font-bold mb-6 playfair">
-                Halo, Saya <span class="gold-gradient">Wahyu Trianto</span>
+                <span data-i18n="hero_greeting">Hello, I'm</span> <span class="gold-gradient">Wahyu Trianto</span>
             </h2>
             <p class="text-xl md:text-2xl text-gray-300 mb-8">
                 Full Stack Developer & UI/UX Designer
             </p>
-            <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-                Menciptakan pengalaman digital yang menakjubkan dengan teknologi modern dan desain yang elegan.
+            <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto" data-i18n="hero_tagline">
+                Crafting stunning digital experiences with modern technology and elegant design.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#projects" class="gold-border px-8 py-3 rounded-lg text-white hover:bg-yellow-500 hover:text-yellow-400 transition-all duration-300 hover-lift">
-                    Lihat Portfolio
+                <a href="#projects" class="gold-border px-8 py-3 rounded-lg text-white hover:bg-yellow-500 hover:text-yellow-400 transition-all duration-300 hover-lift" data-i18n="btn_view_portfolio">
+                    View Portfolio
                 </a>
-                <a href="#contact" class="border-2 border-yellow-500 px-8 py-3 rounded-lg text-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 hover-lift">
-                    Hubungi Saya
+                <a href="#contact" class="border-2 border-yellow-500 px-8 py-3 rounded-lg text-yellow-500 hover:bg-yellow-500 hover:text-black transition-all duration-300 hover-lift" data-i18n="btn_contact_me">
+                    Contact Me
                 </a>
             </div>
         </div>
@@ -388,7 +421,7 @@
     <section id="about" class="py-20 px-6">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 playfair">
-                Tentang <span class="gold-gradient">Saya</span>
+                <span data-i18n="about_title_prefix">About</span> <span class="gold-gradient" data-i18n="about_title_gold">Me</span>
             </h2>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="relative">
@@ -398,23 +431,22 @@
                     <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-yellow-500 rounded-lg opacity-20"></div>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-semibold mb-4">Developer & Designer Kreatif</h3>
-                    <p class="text-gray-300 mb-6">
-                        Dengan pengalaman lebih dari 5 tahun di industri teknologi, saya telah membantu berbagai perusahaan 
-                        mengubah ide mereka menjadi produk digital yang sukses. Saya percaya bahwa kombinasi antara 
-                        teknologi yang kuat dan desain yang intuitif adalah kunci untuk menciptakan pengalaman pengguna 
-                        yang luar biasa.
+                    <h3 class="text-2xl font-semibold mb-4" data-i18n="about_subtitle">Creative Developer & Designer</h3>
+                    <p class="text-gray-300 mb-6" data-i18n="about_paragraph">
+                        With over 5 years of experience in the tech industry, I have helped various companies
+                        turn their ideas into successful digital products. I believe that the combination of
+                        robust technology and intuitive design is the key to creating exceptional user experiences.
                     </p>
                     <div class="grid grid-cols-2 gap-4 mb-6">
                         <div class="bg-white/5 p-4 rounded-lg">
                             <i class="fas fa-code text-yellow-500 text-2xl mb-2"></i>
                             <h4 class="font-semibold">Clean Code</h4>
-                            <p class="text-sm text-gray-400">Kode yang terstruktur dan mudah dipelihara</p>
+                            <p class="text-sm text-gray-400" data-i18n="feature_clean_desc">Well-structured and maintainable code</p>
                         </div>
                         <div class="bg-white/5 p-4 rounded-lg">
                             <i class="fas fa-palette text-yellow-500 text-2xl mb-2"></i>
                             <h4 class="font-semibold">Modern Design</h4>
-                            <p class="text-sm text-gray-400">Desain yang mengikuti tren terkini</p>
+                            <p class="text-sm text-gray-400" data-i18n="feature_modern_desc">Designs that follow modern trends</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
@@ -449,15 +481,15 @@
     <section id="skills" class="py-20 px-6 bg-black/30">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 playfair">
-                Keahlian <span class="gold-gradient">Saya</span>
+                <span data-i18n="skills_title_prefix">My</span> <span class="gold-gradient" data-i18n="skills_title_gold">Skills</span>
             </h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div>
-                    <h3 class="text-2xl font-semibold mb-6">Technical Skills</h3>
+                    <h3 class="text-2xl font-semibold mb-6" data-i18n="skills_section_title">Technical Skills</h3>
                     <div class="space-y-6">
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span>Frontend Development</span>
+                                <span data-i18n="skill_frontend">Frontend Development</span>
                                 <span class="text-yellow-500">95%</span>
                             </div>
                             <div class="skill-bar">
@@ -466,7 +498,7 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span>Backend Development</span>
+                                <span data-i18n="skill_backend">Backend Development</span>
                                 <span class="text-yellow-500">85%</span>
                             </div>
                             <div class="skill-bar">
@@ -475,7 +507,7 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span>UI/UX Design</span>
+                                <span data-i18n="skill_uiux">UI/UX Design</span>
                                 <span class="text-yellow-500">90%</span>
                             </div>
                             <div class="skill-bar">
@@ -484,7 +516,7 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span>Database Management</span>
+                                <span data-i18n="skill_database">Database Management</span>
                                 <span class="text-yellow-500">80%</span>
                             </div>
                             <div class="skill-bar">
@@ -494,7 +526,7 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-semibold mb-6">Technologies</h3>
+                    <h3 class="text-2xl font-semibold mb-6" data-i18n="tech_section_title">Technologies</h3>
                     <div class="grid grid-cols-3 gap-4">
                         <div class="bg-white/5 p-4 rounded-lg text-center hover-lift cursor-pointer">
                             <i class="fab fa-react text-4xl text-yellow-500 mb-2"></i>
@@ -530,14 +562,14 @@
     <section id="projects" class="py-20 px-6">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 playfair">
-                Proyek <span class="gold-gradient">Terbaru</span>
+                <span data-i18n="projects_title_prefix">Latest</span> <span class="gold-gradient" data-i18n="projects_title_gold">Projects</span>
             </h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
                 <div class="project-card gold-border p-1 rounded-lg hover-lift h-full">
                     <div class="bg-black rounded-lg p-6 h-full flex flex-col">
                         <img src="assets/img/logo1.png" alt="Project 1" class="rounded-lg mb-4 w-full h-48 object-cover">
                         <h3 class="text-xl font-semibold mb-2">Zentrix Kreasi</h3>
-                        <p class="text-gray-400 mb-4">Zentrix Kreasi adalah perusahaan kreatif yang bergerak di bidang desain grafis dan pengembangan website modern untuk kebutuhan bisnis.</p>
+                        <p class="text-gray-400 mb-4" data-i18n="project1_desc">Zentrix Kreasi is a creative company engaged in graphic design and modern website development for business needs.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">HTML</span>
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">CSS</span>
@@ -546,7 +578,7 @@
                         </div>
                         <div class="flex gap-4 mt-auto">
                             <a href="https://zentrix.siabid.id" class="text-yellow-500 hover:text-yellow-400">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="label_live_demo">Live Demo</span>
                             </a>
                             <!-- <a href="https://github.com/whtrianto/zentrix-kreasi" class="text-gray-400 hover:text-white">
                                 <i class="fab fa-github"></i> GitHub
@@ -558,8 +590,8 @@
                 <div class="project-card gold-border p-1 rounded-lg hover-lift h-full">
                     <div class="bg-black rounded-lg p-6 h-full flex flex-col">
                         <img src="assets/img/game.jpg" alt="Project 2" class="rounded-lg mb-4 w-full h-48 object-cover">
-                        <h3 class="text-xl font-semibold mb-2">Game Online</h3>
-                        <p class="text-gray-400 mb-4">Platform game online yang menarik dan menantang.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="project2_title">Online Game</h3>
+                        <p class="text-gray-400 mb-4" data-i18n="project2_desc">An engaging and challenging online gaming platform.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">HTML</span>
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">CSS</span>
@@ -567,7 +599,7 @@
                         </div>
                         <div class="flex gap-4 mt-auto">
                             <a href="https://zentrixfun.vercel.app/" class="text-yellow-500 hover:text-yellow-400">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="label_live_demo">Live Demo</span>
                             </a>
                             <!-- <a href="https://github.com/whtrianto/sistem-pakar-diagnosa-disleksia" class="text-gray-400 hover:text-white">
                                 <i class="fab fa-github"></i> GitHub
@@ -578,8 +610,8 @@
                 <div class="project-card gold-border p-1 rounded-lg hover-lift h-full">
                     <div class="bg-black rounded-lg p-6 h-full flex flex-col">
                         <img src="assets/img/ai.png" alt="Project 2" class="rounded-lg mb-4 w-full h-48 object-cover">
-                        <h3 class="text-xl font-semibold mb-2">Sistem Pakar Diagnosa Disleksia</h3>
-                        <p class="text-gray-400 mb-4">Aplikasi sistem pakar untuk membantu identifikasi dini gejala disleksia pada anak menggunakan metode Forward Chaining dan Certainty Factor.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="project3_title">Expert System for Dyslexia Diagnosis</h3>
+                        <p class="text-gray-400 mb-4" data-i18n="project3_desc">An expert system application to help early identification of dyslexia symptoms in children using Forward Chaining and Certainty Factor.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">PHP</span>
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">MySQL</span>
@@ -587,7 +619,7 @@
                         </div>
                         <div class="flex gap-4 mt-auto">
                             <a href="https://siabid.informatika.ump.ac.id" class="text-yellow-500 hover:text-yellow-400">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="label_live_demo">Live Demo</span>
                             </a>
                             <!-- <a href="https://github.com/whtrianto/sistem-pakar-diagnosa-disleksia" class="text-gray-400 hover:text-white">
                                 <i class="fab fa-github"></i> GitHub
@@ -599,8 +631,8 @@
                 <div class="project-card gold-border p-1 rounded-lg hover-lift h-full">
                     <div class="bg-black rounded-lg p-6 h-full flex flex-col">
                         <img src="assets/img/bubay.jpg" alt="Project 3" class="rounded-lg mb-4 w-full h-48 object-cover">
-                        <h3 class="text-xl font-semibold mb-2">Toko Rajutan</h3>
-                        <p class="text-gray-400 mb-4">Website toko rajutan dengan katalog produk, detail informasi, dan layanan pemesanan online yang mudah diakses.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="project4_title">Knitting Store</h3>
+                        <p class="text-gray-400 mb-4" data-i18n="project4_desc">A knitting store website with product catalogs, detailed information, and easy online ordering.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">HTML</span>
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">CSS</span>
@@ -609,7 +641,7 @@
                         </div>
                         <div class="flex gap-4 mt-auto">
                             <a href="https://zentrix-kreasi.vercel.app/bubay.html" class="text-yellow-500 hover:text-yellow-400">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="label_live_demo">Live Demo</span>
                             </a>
                             <!-- <a href="https://github.com/whtrianto/toko-rajutan" class="text-gray-400 hover:text-white">
                                 <i class="fab fa-github"></i> GitHub
@@ -620,8 +652,8 @@
                 <div class="project-card gold-border p-1 rounded-lg hover-lift h-full">
                     <div class="bg-black rounded-lg p-6 h-full flex flex-col">
                         <img src="assets/img/klinik.jpg" alt="Project 3" class="rounded-lg mb-4 w-full h-48 object-cover">
-                        <h3 class="text-xl font-semibold mb-2">Klinik</h3>
-                        <p class="text-gray-400 mb-4">Website klinik yang menampilkan informasi layanan kesehatan, profil dokter, dan pendaftaran online secara mudah dan responsif.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="project5_title">Clinic</h3>
+                        <p class="text-gray-400 mb-4" data-i18n="project5_desc">A clinic website showcasing healthcare services, doctor profiles, and easy, responsive online registration.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">HTML</span>
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">CSS</span>
@@ -630,10 +662,10 @@
                         </div>
                         <div class="flex gap-4 mt-auto">
                             <a href="https://zentrix-kreasi.vercel.app/ariyanto.html" class="text-yellow-500 hover:text-yellow-400">
-                                <i class="fas fa-external-link-alt"></i> Live Demo 1
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="label_live_demo1">Live Demo 1</span>
                             </a><br>
                             <a href="https://qiana-medika.siabid.id" class="text-yellow-500 hover:text-yellow-400">
-                                <i class="fas fa-external-link-alt"></i> Live Demo 2
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="label_live_demo2">Live Demo 2</span>
                             </a>
                             <!-- <a href="https://github.com/whtrianto/klinik" class="text-gray-400 hover:text-white">
                                 <i class="fab fa-github"></i> GitHub
@@ -644,8 +676,8 @@
                 <div class="project-card gold-border p-1 rounded-lg hover-lift h-full">
                     <div class="bg-black rounded-lg p-6 h-full flex flex-col">
                         <img src="assets/img/ternak.webp" alt="Project 3" class="rounded-lg mb-4 w-full h-48 object-cover">
-                        <h3 class="text-xl font-semibold mb-2">Pakan Ternak</h3>
-                        <p class="text-gray-400 mb-4">Website pakan ternak yang menyediakan informasi produk, manfaat, dan tips perawatan hewan untuk peternak.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="project6_title">Animal Feed</h3>
+                        <p class="text-gray-400 mb-4" data-i18n="project6_desc">An animal feed website providing product information, benefits, and animal care tips for farmers.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">HTML</span>
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">CSS</span>
@@ -654,7 +686,7 @@
                         </div>
                         <div class="flex gap-4 mt-auto">
                             <a href="https://pembuatan-websites.vercel.app" class="text-yellow-500 hover:text-yellow-400">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="label_live_demo">Live Demo</span>
                             </a>
                             <!-- <a href="https://github.com/whtrianto/pakan-ternak" class="text-gray-400 hover:text-white">
                                 <i class="fab fa-github"></i> GitHub
@@ -665,8 +697,8 @@
                 <div class="project-card gold-border p-1 rounded-lg hover-lift h-full">
                     <div class="bg-black rounded-lg p-6 h-full flex flex-col">
                         <img src="assets/img/nikah.jpeg" alt="Project 3" class="rounded-lg mb-4 w-full h-48 object-cover">
-                        <h3 class="text-xl font-semibold mb-2">Website Undangan Pernikahan Digital</h3>
-                        <p class="text-gray-400 mb-4">Website undangan pernikahan digital yang interaktif, responsif, dan dilengkapi fitur RSVP serta katalog produk.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="project7_title">Digital Wedding Invitation Website</h3>
+                        <p class="text-gray-400 mb-4" data-i18n="project7_desc">A digital wedding invitation website that is interactive, responsive, and equipped with RSVP features and a product catalog.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">HTML</span>
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">CSS</span>
@@ -675,7 +707,7 @@
                         </div>
                         <div class="flex gap-4 mt-auto">
                             <a href="https://fanifita-wedding.vercel.app/?kepada=Di+tempat" class="text-yellow-500 hover:text-yellow-400">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="label_live_demo">Live Demo</span>
                             </a>
                             <!-- <a href="https://github.com/whtrianto/toko-rajutan" class="text-gray-400 hover:text-white">
                                 <i class="fab fa-github"></i> GitHub
@@ -686,8 +718,8 @@
                 <div class="project-card gold-border p-1 rounded-lg hover-lift h-full">
                     <div class="bg-black rounded-lg p-6 h-full flex flex-col">
                         <img src="assets/img/pisang.jpg" alt="Project 3" class="rounded-lg mb-4 w-full h-48 object-cover">
-                        <h3 class="text-xl font-semibold mb-2">Klasifikasi Tingkat Kematangan Pisang</h3>
-                        <p class="text-gray-400 mb-4">Model machine learning KNN untuk klasifikasi tingkat kematangan pisang secara otomatis dari gambar.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="project8_title">Banana Ripeness Classification</h3>
+                        <p class="text-gray-400 mb-4" data-i18n="project8_desc">A KNN machine learning model for automatically classifying banana ripeness from images.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">HTML</span>
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">CSS</span>
@@ -704,8 +736,8 @@
                 <div class="project-card gold-border p-1 rounded-lg hover-lift h-full">
                     <div class="bg-black rounded-lg p-6 h-full flex flex-col">
                         <img src="assets/img/renang.jpeg" alt="Project 3" class="rounded-lg mb-4 w-full h-48 object-cover">
-                        <h3 class="text-xl font-semibold mb-2">Kolam Renang Selo Asih</h3>
-                        <p class="text-gray-400 mb-4">Website promosi kolam renang Selo Asih yang menampilkan fasilitas, galeri, lokasi, dan informasi tiket secara interaktif dan modern.</p>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="project9_title">Selo Asih Swimming Pool</h3>
+                        <p class="text-gray-400 mb-4" data-i18n="project9_desc">A promotional website for Selo Asih swimming pool featuring facilities, gallery, location, and ticket information in an interactive, modern way.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">HTML</span>
                             <span class="text-xs bg-yellow-500/20 text-yellow-500 px-2 py-1 rounded">CSS</span>
@@ -714,7 +746,7 @@
                         </div>
                         <div class="flex gap-4 mt-auto">
                             <a href="https://zentrix-kreasi.vercel.app/seloasih.html" class="text-yellow-500 hover:text-yellow-400">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="label_live_demo">Live Demo</span>
                             </a>
                             <!-- <a href="https://github.com/whtrianto/toko-rajutan" class="text-gray-400 hover:text-white">
                                 <i class="fab fa-github"></i> GitHub
@@ -730,14 +762,14 @@
     <section id="contact" class="py-20 px-6 bg-black/30">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 playfair">
-                Hubungi <span class="gold-gradient">Saya</span>
+                <span data-i18n="contact_title_prefix">Contact</span> <span class="gold-gradient" data-i18n="contact_title_gold">Me</span>
             </h2>
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <h3 class="text-2xl font-semibold mb-6">Mari Bekerja Sama</h3>
-                    <p class="text-gray-300 mb-8">
-                        Saya selalu terbuka untuk diskusi tentang proyek baru, ide kreatif, atau peluang untuk menjadi 
-                        bagian dari visi Anda.
+                    <h3 class="text-2xl font-semibold mb-6" data-i18n="contact_subtitle">Let's Work Together</h3>
+                    <p class="text-gray-300 mb-8" data-i18n="contact_paragraph">
+                        I am always open to discussions about new projects, creative ideas, or opportunities to be
+                        part of your vision.
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-center gap-4">
@@ -755,16 +787,16 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-center">Kirim Cepat</h3>
+                    <h3 class="text-2xl font-semibold mb-6 text-center" data-i18n="quick_title">Quick Message</h3>
                     <form id="quick-contact-form" class="space-y-4">
                         <div>
-                            <input type="text" name="name" placeholder="Nama Anda" class="w-full bg-white/5 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-yellow-500 transition-colors" required>
+                            <input type="text" name="name" placeholder="Your Name" data-i18n="placeholder_name" data-i18n-attr="placeholder" class="w-full bg-white/5 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-yellow-500 transition-colors" required>
                         </div>
                         <div>
-                            <textarea name="message" placeholder="Pesan Anda" rows="4" class="w-full bg-white/5 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-yellow-500 transition-colors resize-none" required></textarea>
+                            <textarea name="message" placeholder="Your Message" data-i18n="placeholder_message" data-i18n-attr="placeholder" rows="4" class="w-full bg-white/5 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-yellow-500 transition-colors resize-none" required></textarea>
                         </div>
-                        <button type="submit" class="w-full gold-border py-3 rounded-lg text-white hover:bg-yellow-500 hover:text-yellow-400 transition-all duration-300 hover-lift">
-                            Kirim Pesan
+                        <button type="submit" class="w-full gold-border py-3 rounded-lg text-white hover:bg-yellow-500 hover:text-yellow-400 transition-all duration-300 hover-lift" data-i18n="btn_send_message">
+                            Send Message
                         </button>
                     </form>
                 </div>
@@ -857,11 +889,736 @@
                 const message = quickForm.querySelector('textarea[name="message"]').value.trim();
                 if (!name || !message) return;
                 const phoneNumber = '6289666077720';
-                const text = `Halo, saya ${name}, ingin menyampaikan: ${message}`;
+                const currentLang = getCurrentLang ? getCurrentLang() : 'en';
+                const tmpl = (translations && translations[currentLang] && translations[currentLang].whatsapp_template) ? translations[currentLang].whatsapp_template : translations.en.whatsapp_template;
+                const text = tmpl(name, message);
                 const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
                 window.open(url, '_blank');
                 quickForm.reset();
             });
+        }
+
+        // Language selection (EN <-> ID) in-page
+        const translations = {
+            en: {
+                nav_home: 'Home',
+                nav_about: 'About',
+                nav_skills: 'Skills',
+                nav_projects: 'Projects',
+                nav_contact: 'Contact',
+                hero_greeting: "Hello, I'm",
+                hero_tagline: 'Crafting stunning digital experiences with modern technology and elegant design.',
+                btn_view_portfolio: 'View Portfolio',
+                btn_contact_me: 'Contact Me',
+                about_title_prefix: 'About',
+                about_title_gold: 'Me',
+                about_subtitle: 'Creative Developer & Designer',
+                about_paragraph: 'With over 5 years of experience in the tech industry, I have helped various companies turn their ideas into successful digital products. I believe that the combination of robust technology and intuitive design is the key to creating exceptional user experiences.',
+                feature_clean_desc: 'Well-structured and maintainable code',
+                feature_modern_desc: 'Designs that follow modern trends',
+                skills_title_prefix: 'My',
+                skills_title_gold: 'Skills',
+                projects_title_prefix: 'Latest',
+                projects_title_gold: 'Projects',
+                project1_desc: 'Zentrix Kreasi is a creative company engaged in graphic design and modern website development for business needs.',
+                project2_title: 'Online Game',
+                project2_desc: 'An engaging and challenging online gaming platform.',
+                project3_title: 'Expert System for Dyslexia Diagnosis',
+                project3_desc: 'An expert system application to help early identification of dyslexia symptoms in children using Forward Chaining and Certainty Factor.',
+                project4_title: 'Knitting Store',
+                project4_desc: 'A knitting store website with product catalogs, detailed information, and easy online ordering.',
+                project5_title: 'Clinic',
+                project5_desc: 'A clinic website showcasing healthcare services, doctor profiles, and easy, responsive online registration.',
+                project6_title: 'Animal Feed',
+                project6_desc: 'An animal feed website providing product information, benefits, and animal care tips for farmers.',
+                project7_title: 'Digital Wedding Invitation Website',
+                project7_desc: 'A digital wedding invitation website that is interactive, responsive, and equipped with RSVP features and a product catalog.',
+                project8_title: 'Banana Ripeness Classification',
+                project8_desc: 'A KNN machine learning model for automatically classifying banana ripeness from images.',
+                project9_title: 'Selo Asih Swimming Pool',
+                project9_desc: 'A promotional website for Selo Asih swimming pool featuring facilities, gallery, location, and ticket information in an interactive, modern way.',
+                contact_title_prefix: 'Contact',
+                contact_title_gold: 'Me',
+                contact_subtitle: "Let's Work Together",
+                contact_paragraph: 'I am always open to discussions about new projects, creative ideas, or opportunities to be part of your vision.',
+                quick_title: 'Quick Message',
+                placeholder_name: 'Your Name',
+                placeholder_message: 'Your Message',
+                btn_send_message: 'Send Message',
+                whatsapp_template: (name, message) => `Hello, I'm ${name}. I'd like to say: ${message}`,
+                skills_section_title: 'Technical Skills',
+                tech_section_title: 'Technologies',
+                skill_frontend: 'Frontend Development',
+                skill_backend: 'Backend Development',
+                skill_uiux: 'UI/UX Design',
+                skill_database: 'Database Management',
+                label_live_demo: 'Live Demo',
+                label_live_demo1: 'Live Demo 1',
+                label_live_demo2: 'Live Demo 2',
+            },
+            id: {
+                nav_home: 'Beranda',
+                nav_about: 'Tentang',
+                nav_skills: 'Keahlian',
+                nav_projects: 'Proyek',
+                nav_contact: 'Kontak',
+                hero_greeting: 'Halo, Saya',
+                hero_tagline: 'Menciptakan pengalaman digital yang menakjubkan dengan teknologi modern dan desain yang elegan.',
+                btn_view_portfolio: 'Lihat Portofolio',
+                btn_contact_me: 'Hubungi Saya',
+                about_title_prefix: 'Tentang',
+                about_title_gold: 'Saya',
+                about_subtitle: 'Developer & Designer Kreatif',
+                about_paragraph: 'Dengan pengalaman lebih dari 5 tahun di industri teknologi, saya telah membantu berbagai perusahaan mengubah ide mereka menjadi produk digital yang sukses. Saya percaya bahwa kombinasi antara teknologi yang kuat dan desain yang intuitif adalah kunci untuk menciptakan pengalaman pengguna yang luar biasa.',
+                feature_clean_desc: 'Kode yang terstruktur dan mudah dipelihara',
+                feature_modern_desc: 'Desain yang mengikuti tren terkini',
+                skills_title_prefix: 'Keahlian',
+                skills_title_gold: 'Saya',
+                projects_title_prefix: 'Proyek',
+                projects_title_gold: 'Terbaru',
+                project1_desc: 'Zentrix Kreasi adalah perusahaan kreatif yang bergerak di bidang desain grafis dan pengembangan website modern untuk kebutuhan bisnis.',
+                project2_title: 'Game Online',
+                project2_desc: 'Platform game online yang menarik dan menantang.',
+                project3_title: 'Sistem Pakar Diagnosa Disleksia',
+                project3_desc: 'Aplikasi sistem pakar untuk membantu identifikasi dini gejala disleksia pada anak menggunakan metode Forward Chaining dan Certainty Factor.',
+                project4_title: 'Toko Rajutan',
+                project4_desc: 'Website toko rajutan dengan katalog produk, detail informasi, dan layanan pemesanan online yang mudah diakses.',
+                project5_title: 'Klinik',
+                project5_desc: 'Website klinik yang menampilkan informasi layanan kesehatan, profil dokter, dan pendaftaran online secara mudah dan responsif.',
+                project6_title: 'Pakan Ternak',
+                project6_desc: 'Website pakan ternak yang menyediakan informasi produk, manfaat, dan tips perawatan hewan untuk peternak.',
+                project7_title: 'Website Undangan Pernikahan Digital',
+                project7_desc: 'Website undangan pernikahan digital yang interaktif, responsif, dan dilengkapi fitur RSVP serta katalog produk.',
+                project8_title: 'Klasifikasi Tingkat Kematangan Pisang',
+                project8_desc: 'Model machine learning KNN untuk klasifikasi tingkat kematangan pisang secara otomatis dari gambar.',
+                project9_title: 'Kolam Renang Selo Asih',
+                project9_desc: 'Website promosi kolam renang Selo Asih yang menampilkan fasilitas, galeri, lokasi, dan informasi tiket secara interaktif dan modern.',
+                contact_title_prefix: 'Hubungi',
+                contact_title_gold: 'Saya',
+                contact_subtitle: 'Mari Bekerja Sama',
+                contact_paragraph: 'Saya selalu terbuka untuk diskusi tentang proyek baru, ide kreatif, atau peluang untuk menjadi bagian dari visi Anda.',
+                quick_title: 'Kirim Cepat',
+                placeholder_name: 'Nama Anda',
+                placeholder_message: 'Pesan Anda',
+                btn_send_message: 'Kirim Pesan',
+                whatsapp_template: (name, message) => `Halo, saya ${name}, ingin menyampaikan: ${message}`,
+                skills_section_title: 'Keahlian Teknis',
+                tech_section_title: 'Teknologi',
+                skill_frontend: 'Pengembangan Frontend',
+                skill_backend: 'Pengembangan Backend',
+                skill_uiux: 'Desain UI/UX',
+                skill_database: 'Manajemen Basis Data',
+                label_live_demo: 'Demo Langsung',
+                label_live_demo1: 'Demo Langsung 1',
+                label_live_demo2: 'Demo Langsung 2',
+            },
+            es: {
+                nav_home: 'Inicio',
+                nav_about: 'Acerca de',
+                nav_skills: 'Habilidades',
+                nav_projects: 'Proyectos',
+                nav_contact: 'Contacto',
+                hero_greeting: 'Hola, soy',
+                hero_tagline: 'Creando experiencias digitales increíbles con tecnología moderna y diseño elegante.',
+                btn_view_portfolio: 'Ver Portafolio',
+                btn_contact_me: 'Contáctame',
+                about_title_prefix: 'Acerca de',
+                about_title_gold: 'mí',
+                about_subtitle: 'Desarrollador y Diseñador Creativo',
+                about_paragraph: 'Con más de 5 años de experiencia en la industria tecnológica, he ayudado a varias empresas a convertir sus ideas en productos digitales exitosos. Creo que la combinación de tecnología robusta y diseño intuitivo es clave para crear experiencias de usuario excepcionales.',
+                feature_clean_desc: 'Código bien estructurado y mantenible',
+                feature_modern_desc: 'Diseños que siguen las tendencias modernas',
+                skills_title_prefix: 'Mis',
+                skills_title_gold: 'Habilidades',
+                projects_title_prefix: 'Últimos',
+                projects_title_gold: 'Proyectos',
+                project1_desc: 'Zentrix Kreasi es una empresa creativa dedicada al diseño gráfico y al desarrollo web moderno para empresas.',
+                project2_title: 'Juego en Línea',
+                project2_desc: 'Una plataforma de juegos en línea atractiva y desafiante.',
+                project3_title: 'Sistema Experto para Diagnóstico de Dislexia',
+                project3_desc: 'Aplicación de sistema experto para ayudar a la identificación temprana de síntomas de dislexia en niños mediante Forward Chaining y Certainty Factor.',
+                project4_title: 'Tienda de Tejido',
+                project4_desc: 'Sitio web de tienda de tejido con catálogos de productos, información detallada y pedidos en línea fáciles.',
+                project5_title: 'Clínica',
+                project5_desc: 'Sitio web de clínica que muestra servicios de salud, perfiles de médicos y registro en línea fácil y responsivo.',
+                project6_title: 'Alimentos para Animales',
+                project6_desc: 'Sitio web que proporciona información de productos, beneficios y consejos de cuidado para agricultores.',
+                project7_title: 'Sitio Web de Invitación de Boda Digital',
+                project7_desc: 'Sitio web de invitación de boda digital interactivo, responsivo y con funciones de RSVP y catálogo de productos.',
+                project8_title: 'Clasificación de Madurez de Bananas',
+                project8_desc: 'Modelo de aprendizaje automático KNN para clasificar automáticamente la madurez de las bananas a partir de imágenes.',
+                project9_title: 'Piscina Selo Asih',
+                project9_desc: 'Sitio promocional de la piscina Selo Asih con instalaciones, galería, ubicación e información de boletos de forma interactiva y moderna.',
+                contact_title_prefix: 'Contacto',
+                contact_title_gold: 'Yo',
+                contact_subtitle: 'Trabajemos juntos',
+                contact_paragraph: 'Siempre estoy abierto a hablar sobre nuevos proyectos, ideas creativas u oportunidades para ser parte de tu visión.',
+                quick_title: 'Mensaje Rápido',
+                placeholder_name: 'Tu Nombre',
+                placeholder_message: 'Tu Mensaje',
+                btn_send_message: 'Enviar Mensaje',
+                whatsapp_template: (name, message) => `Hola, soy ${name}. Quisiera decir: ${message}`,
+                skills_section_title: 'Habilidades Técnicas',
+                tech_section_title: 'Tecnologías',
+                skill_frontend: 'Desarrollo Frontend',
+                skill_backend: 'Desarrollo Backend',
+                skill_uiux: 'Diseño UI/UX',
+                skill_database: 'Gestión de Bases de Datos',
+                label_live_demo: 'Demo en Vivo',
+                label_live_demo1: 'Demo en Vivo 1',
+                label_live_demo2: 'Demo en Vivo 2',
+            },
+            fr: {
+                nav_home: 'Accueil',
+                nav_about: 'À propos',
+                nav_skills: 'Compétences',
+                nav_projects: 'Projets',
+                nav_contact: 'Contact',
+                hero_greeting: 'Bonjour, je suis',
+                hero_tagline: 'Créer des expériences numériques impressionnantes avec une technologie moderne et un design élégant.',
+                btn_view_portfolio: 'Voir le Portfolio',
+                btn_contact_me: 'Me Contacter',
+                about_title_prefix: 'À propos',
+                about_title_gold: 'de moi',
+                about_subtitle: 'Développeur et Designer Créatif',
+                about_paragraph: "Avec plus de 5 ans d'expérience dans la tech, j'ai aidé diverses entreprises à transformer leurs idées en produits numériques réussis. Je crois que la combinaison d'une technologie robuste et d'un design intuitif est la clé pour créer des expériences utilisateur exceptionnelles.",
+                feature_clean_desc: 'Code bien structuré et maintenable',
+                feature_modern_desc: 'Designs suivant les tendances modernes',
+                skills_title_prefix: 'Mes',
+                skills_title_gold: 'Compétences',
+                projects_title_prefix: 'Derniers',
+                projects_title_gold: 'Projets',
+                project1_desc: 'Zentrix Kreasi est une société créative spécialisée dans le design graphique et le développement web moderne.',
+                project2_title: 'Jeu en Ligne',
+                project2_desc: 'Une plateforme de jeux en ligne engageante et stimulante.',
+                project3_title: 'Système Expert pour le Diagnostic de la Dyslexie',
+                project3_desc: 'Application de système expert aidant à l’identification précoce des symptômes de la dyslexie chez les enfants.',
+                project4_title: 'Boutique de Tricot',
+                project4_desc: 'Site de boutique de tricot avec catalogue, informations détaillées et commande en ligne.',
+                project5_title: 'Clinique',
+                project5_desc: 'Site de clinique présentant les services, profils des médecins et inscription en ligne.',
+                project6_title: 'Aliments pour Animaux',
+                project6_desc: 'Site fournissant des informations produits, bénéfices et conseils de soins.',
+                project7_title: 'Site Web d’Invitation de Mariage Digital',
+                project7_desc: 'Site d’invitation de mariage digital interactif et réactif avec RSVP.',
+                project8_title: 'Classification de la Maturation des Bananes',
+                project8_desc: 'Modèle KNN pour classer automatiquement la maturation des bananes à partir d’images.',
+                project9_title: 'Piscine Selo Asih',
+                project9_desc: 'Site de présentation de la piscine Selo Asih avec installations, galerie, localisation et informations sur les billets, de manière interactive et moderne.',
+                contact_title_prefix: 'Contact',
+                contact_title_gold: 'Moi',
+                contact_subtitle: 'Travaillons ensemble',
+                contact_paragraph: 'Toujours ouvert aux discussions sur de nouveaux projets, idées créatives et opportunités.',
+                quick_title: 'Message Rapide',
+                placeholder_name: 'Votre Nom',
+                placeholder_message: 'Votre Message',
+                btn_send_message: 'Envoyer',
+                whatsapp_template: (name, message) => `Bonjour, je suis ${name}. Je voudrais dire : ${message}`,
+                skills_section_title: 'Compétences Techniques',
+                tech_section_title: 'Technologies',
+                skill_frontend: 'Développement Frontend',
+                skill_backend: 'Développement Backend',
+                skill_uiux: 'Design UI/UX',
+                skill_database: 'Gestion de Base de Données',
+                label_live_demo: 'Démo en Ligne',
+                label_live_demo1: 'Démo en Ligne 1',
+                label_live_demo2: 'Démo en Ligne 2',
+            },
+            de: {
+                nav_home: 'Start',
+                nav_about: 'Über mich',
+                nav_skills: 'Fähigkeiten',
+                nav_projects: 'Projekte',
+                nav_contact: 'Kontakt',
+                hero_greeting: 'Hallo, ich bin',
+                hero_tagline: 'Beeindruckende digitale Erlebnisse mit moderner Technologie und elegantem Design.',
+                btn_view_portfolio: 'Portfolio ansehen',
+                btn_contact_me: 'Kontaktiere mich',
+                about_title_prefix: 'Über',
+                about_title_gold: 'mich',
+                about_subtitle: 'Kreativer Entwickler & Designer',
+                about_paragraph: 'Mit über 5 Jahren Erfahrung in der Tech-Branche habe ich Unternehmen geholfen, ihre Ideen in erfolgreiche digitale Produkte umzusetzen.',
+                feature_clean_desc: 'Gut strukturierter, wartbarer Code',
+                feature_modern_desc: 'Designs nach modernen Trends',
+                skills_title_prefix: 'Meine',
+                skills_title_gold: 'Fähigkeiten',
+                projects_title_prefix: 'Neueste',
+                projects_title_gold: 'Projekte',
+                project1_desc: 'Zentrix Kreasi ist ein kreatives Unternehmen für Grafikdesign und moderne Webentwicklung.',
+                project2_title: 'Online-Spiel',
+                project2_desc: 'Eine fesselnde und herausfordernde Online-Gaming-Plattform.',
+                project3_title: 'Expertensystem für Dyslexie-Diagnose',
+                project3_desc: 'Expertensystem zur frühen Erkennung von Dyslexie-Symptomen bei Kindern.',
+                project4_title: 'Strickladen',
+                project4_desc: 'Website mit Produktkatalogen, Details und einfacher Online-Bestellung.',
+                project5_title: 'Klinik',
+                project5_desc: 'Klinik-Website mit Leistungen, Ärzteprofilen und Online-Anmeldung.',
+                project6_title: 'Tierfutter',
+                project6_desc: 'Website mit Produktinfos, Vorteilen und Pflegetipps für Landwirte.',
+                project7_title: 'Digitale Hochzeitseinladung',
+                project7_desc: 'Interaktive, responsive Hochzeitseinladungs-Website mit RSVP.',
+                project8_title: 'Bananenreife-Klassifizierung',
+                project8_desc: 'KNN-Modell zur automatischen Klassifizierung des Reifegrads von Bananen.',
+                project9_title: 'Selo Asih Schwimmbad',
+                project9_desc: 'Werbewebsite für das Selo Asih Schwimmbad mit Ausstattung, Galerie, Standort und Ticketinformationen – interaktiv und modern.',
+                contact_title_prefix: 'Kontakt',
+                contact_title_gold: 'mich',
+                contact_subtitle: 'Lass uns zusammenarbeiten',
+                contact_paragraph: 'Ich bin offen für neue Projekte, kreative Ideen und Chancen.',
+                quick_title: 'Schnelle Nachricht',
+                placeholder_name: 'Dein Name',
+                placeholder_message: 'Deine Nachricht',
+                btn_send_message: 'Nachricht senden',
+                whatsapp_template: (name, message) => `Hallo, ich bin ${name}. Ich möchte sagen: ${message}`,
+                skills_section_title: 'Technische Fähigkeiten',
+                tech_section_title: 'Technologien',
+                skill_frontend: 'Frontend-Entwicklung',
+                skill_backend: 'Backend-Entwicklung',
+                skill_uiux: 'UI/UX Design',
+                skill_database: 'Datenbankverwaltung',
+                label_live_demo: 'Live-Demo',
+                label_live_demo1: 'Live-Demo 1',
+                label_live_demo2: 'Live-Demo 2',
+            },
+            pt: {
+                nav_home: 'Início',
+                nav_about: 'Sobre',
+                nav_skills: 'Habilidades',
+                nav_projects: 'Projetos',
+                nav_contact: 'Contato',
+                hero_greeting: 'Olá, eu sou',
+                hero_tagline: 'Criando experiências digitais incríveis com tecnologia moderna e design elegante.',
+                btn_view_portfolio: 'Ver Portfólio',
+                btn_contact_me: 'Fale Comigo',
+                about_title_prefix: 'Sobre',
+                about_title_gold: 'mim',
+                about_subtitle: 'Desenvolvedor e Designer Criativo',
+                about_paragraph: 'Com mais de 5 anos de experiência, ajudei empresas a transformar ideias em produtos digitais de sucesso.',
+                feature_clean_desc: 'Código bem estruturado e sustentável',
+                feature_modern_desc: 'Designs que seguem as tendências modernas',
+                skills_title_prefix: 'Minhas',
+                skills_title_gold: 'Habilidades',
+                projects_title_prefix: 'Últimos',
+                projects_title_gold: 'Projetos',
+                project1_desc: 'Zentrix Kreasi é uma empresa criativa de design gráfico e desenvolvimento web.',
+                project2_title: 'Jogo Online',
+                project2_desc: 'Uma plataforma de jogos online envolvente e desafiadora.',
+                project3_title: 'Sistema Especialista para Dislexia',
+                project3_desc: 'Aplicativo para identificação precoce de sintomas de dislexia em crianças.',
+                project4_title: 'Loja de Tricô',
+                project4_desc: 'Site com catálogo de produtos e pedidos online fáceis.',
+                project5_title: 'Clínica',
+                project5_desc: 'Site de clínica com serviços, perfis de médicos e inscrição online.',
+                project6_title: 'Ração Animal',
+                project6_desc: 'Site com informações de produtos, benefícios e dicas de cuidados.',
+                project7_title: 'Convite de Casamento Digital',
+                project7_desc: 'Site de convite de casamento digital interativo e responsivo com RSVP.',
+                project8_title: 'Classificação de Maturação da Banana',
+                project8_desc: 'Modelo KNN para classificar a maturação da banana a partir de imagens.',
+                project9_title: 'Piscina Selo Asih',
+                project9_desc: 'Site promocional da piscina Selo Asih com instalações, galeria, localização e informações de bilhetes de forma interativa e moderna.',
+                contact_title_prefix: 'Contato',
+                contact_title_gold: 'Eu',
+                contact_subtitle: 'Vamos trabalhar juntos',
+                contact_paragraph: 'Estou sempre aberto para novos projetos e ideias criativas.',
+                quick_title: 'Mensagem Rápida',
+                placeholder_name: 'Seu Nome',
+                placeholder_message: 'Sua Mensagem',
+                btn_send_message: 'Enviar Mensagem',
+                whatsapp_template: (name, message) => `Olá, eu sou ${name}. Gostaria de dizer: ${message}`,
+                skills_section_title: 'Habilidades Técnicas',
+                tech_section_title: 'Tecnologias',
+                skill_frontend: 'Desenvolvimento Frontend',
+                skill_backend: 'Desenvolvimento Backend',
+                skill_uiux: 'Design de UI/UX',
+                skill_database: 'Gerenciamento de Banco de Dados',
+                label_live_demo: 'Demo ao Vivo',
+                label_live_demo1: 'Demo ao Vivo 1',
+                label_live_demo2: 'Demo ao Vivo 2',
+            },
+            it: {
+                nav_home: 'Home',
+                nav_about: 'Chi sono',
+                nav_skills: 'Competenze',
+                nav_projects: 'Progetti',
+                nav_contact: 'Contatti',
+                hero_greeting: 'Ciao, sono',
+                hero_tagline: 'Creo esperienze digitali straordinarie con tecnologia moderna e design elegante.',
+                btn_view_portfolio: 'Vedi Portfolio',
+                btn_contact_me: 'Contattami',
+                about_title_prefix: 'Chi',
+                about_title_gold: 'sono',
+                about_subtitle: 'Sviluppatore e Designer Creativo',
+                about_paragraph: 'Con oltre 5 anni di esperienza, aiuto le aziende a trasformare idee in prodotti digitali di successo.',
+                feature_clean_desc: 'Codice ben strutturato e mantenibile',
+                feature_modern_desc: 'Design secondo le tendenze moderne',
+                skills_title_prefix: 'Le mie',
+                skills_title_gold: 'Competenze',
+                projects_title_prefix: 'Ultimi',
+                projects_title_gold: 'Progetti',
+                project1_desc: 'Zentrix Kreasi è un’azienda creativa di design grafico e sviluppo web.',
+                project2_title: 'Gioco Online',
+                project2_desc: 'Una piattaforma di gioco online coinvolgente e stimolante.',
+                project3_title: 'Sistema Esperto per Dislessia',
+                project3_desc: 'Applicazione per l’identificazione precoce dei sintomi di dislessia nei bambini.',
+                project4_title: 'Negozio di Lavori a Maglia',
+                project4_desc: 'Sito con cataloghi prodotti, informazioni dettagliate e ordini online facili.',
+                project5_title: 'Clinica',
+                project5_desc: 'Sito di clinica con servizi, profili medici e registrazione online.',
+                project6_title: 'Mangimi per Animali',
+                project6_desc: 'Sito con informazioni sui prodotti, benefici e consigli di cura.',
+                project7_title: 'Invito di Nozze Digitale',
+                project7_desc: 'Sito di invito di nozze digitale interattivo e reattivo con RSVP.',
+                project8_title: 'Classificazione Maturazione Banane',
+                project8_desc: 'Modello KNN per classificare automaticamente la maturazione delle banane.',
+                project9_title: 'Piscina Selo Asih',
+                project9_desc: 'Sito promozionale della piscina Selo Asih con strutture, galleria, posizione e informazioni sui biglietti in modo interattivo e moderno.',
+                contact_title_prefix: 'Contatti',
+                contact_title_gold: 'Me',
+                contact_subtitle: 'Lavoriamo insieme',
+                contact_paragraph: 'Aperto a nuovi progetti, idee creative e opportunità.',
+                quick_title: 'Messaggio Veloce',
+                placeholder_name: 'Il tuo Nome',
+                placeholder_message: 'Il tuo Messaggio',
+                btn_send_message: 'Invia Messaggio',
+                whatsapp_template: (name, message) => `Ciao, sono ${name}. Vorrei dire: ${message}`,
+                skills_section_title: 'Competenze Tecniche',
+                tech_section_title: 'Tecnologie',
+                skill_frontend: 'Sviluppo Frontend',
+                skill_backend: 'Sviluppo Backend',
+                skill_uiux: 'Design UI/UX',
+                skill_database: 'Gestione Database',
+                label_live_demo: 'Demo Live',
+                label_live_demo1: 'Demo Live 1',
+                label_live_demo2: 'Demo Live 2',
+            },
+            nl: {
+                nav_home: 'Home',
+                nav_about: 'Over mij',
+                nav_skills: 'Vaardigheden',
+                nav_projects: 'Projecten',
+                nav_contact: 'Contact',
+                hero_greeting: 'Hallo, ik ben',
+                hero_tagline: 'Prachtige digitale ervaringen met moderne technologie en elegant design.',
+                btn_view_portfolio: 'Portfolio bekijken',
+                btn_contact_me: 'Neem contact op',
+                about_title_prefix: 'Over',
+                about_title_gold: 'mij',
+                about_subtitle: 'Creatieve Developer & Designer',
+                about_paragraph: 'Met meer dan 5 jaar ervaring help ik bedrijven ideeën om te zetten in succesvolle digitale producten.',
+                feature_clean_desc: 'Goed gestructureerde en onderhoudbare code',
+                feature_modern_desc: 'Designs volgens moderne trends',
+                skills_title_prefix: 'Mijn',
+                skills_title_gold: 'Vaardigheden',
+                projects_title_prefix: 'Laatste',
+                projects_title_gold: 'Projecten',
+                project1_desc: 'Zentrix Kreasi is een creatief bedrijf voor grafisch ontwerp en moderne webontwikkeling.',
+                project2_title: 'Online Game',
+                project2_desc: 'Een boeiend en uitdagend online gamingplatform.',
+                project3_title: 'Expertsysteem voor Dyslexie-diagnose',
+                project3_desc: 'Toepassing om dyslexiesymptomen bij kinderen vroeg te identificeren.',
+                project4_title: 'Breishop',
+                project4_desc: 'Website met productcatalogi, details en eenvoudige online bestellingen.',
+                project5_title: 'Kliniek',
+                project5_desc: 'Kliniekwebsite met diensten, artsenprofielen en online registratie.',
+                project6_title: 'Diervoeder',
+                project6_desc: 'Website met productinformatie, voordelen en verzorgingstips.',
+                project7_title: 'Digitale Huwelijksuitnodiging',
+                project7_desc: 'Interactieve, responsieve trouwuitnodigingssite met RSVP.',
+                project8_title: 'Bananenrijpheid Classificatie',
+                project8_desc: 'KNN-model om automatisch de rijpheid van bananen te classificeren.',
+                project9_title: 'Selo Asih Zwembad',
+                project9_desc: 'Promotiewebsite voor Selo Asih zwembad met faciliteiten, galerij, locatie en ticketinformatie op een interactieve, moderne manier.',
+                contact_title_prefix: 'Contact',
+                contact_title_gold: 'mij',
+                contact_subtitle: 'Laten we samenwerken',
+                contact_paragraph: 'Altijd open voor nieuwe projecten en ideeën.',
+                quick_title: 'Snel Bericht',
+                placeholder_name: 'Uw Naam',
+                placeholder_message: 'Uw Bericht',
+                btn_send_message: 'Bericht Verzenden',
+                whatsapp_template: (name, message) => `Hallo, ik ben ${name}. Ik wil zeggen: ${message}`,
+                skills_section_title: 'Technische Vaardigheden',
+                tech_section_title: 'Technologieën',
+                skill_frontend: 'Frontend-ontwikkeling',
+                skill_backend: 'Backend-ontwikkeling',
+                skill_uiux: 'UI/UX Ontwerp',
+                skill_database: 'Databasebeheer',
+                label_live_demo: 'Live Demo',
+                label_live_demo1: 'Live Demo 1',
+                label_live_demo2: 'Live Demo 2',
+            },
+            ru: {
+                nav_home: 'Главная',
+                nav_about: 'Обо мне',
+                nav_skills: 'Навыки',
+                nav_projects: 'Проекты',
+                nav_contact: 'Контакты',
+                hero_greeting: 'Привет, я',
+                hero_tagline: 'Создаю впечатляющие цифровые решения с современной технологией и элегантным дизайном.',
+                btn_view_portfolio: 'Смотреть портфолио',
+                btn_contact_me: 'Связаться со мной',
+                about_title_prefix: 'Обо',
+                about_title_gold: 'мне',
+                about_subtitle: 'Креативный разработчик и дизайнер',
+                about_paragraph: 'Более 5 лет опыта в IT, помощь компаниям превращать идеи в успешные цифровые продукты.',
+                feature_clean_desc: 'Хорошо структурированный и поддерживаемый код',
+                feature_modern_desc: 'Дизайн по современным тенденциям',
+                skills_title_prefix: 'Мои',
+                skills_title_gold: 'навыки',
+                projects_title_prefix: 'Последние',
+                projects_title_gold: 'проекты',
+                project1_desc: 'Zentrix Kreasi — креативная компания в области графического дизайна и веб-разработки.',
+                project2_title: 'Онлайн-игра',
+                project2_desc: 'Увлекательная и вызывающая онлайн-платформа.',
+                project3_title: 'Экспертная система диагностики дислексии',
+                project3_desc: 'Приложение для ранней идентификации симптомов дислексии у детей.',
+                project4_title: 'Магазин вязания',
+                project4_desc: 'Сайт с каталогами товаров, описаниями и простой онлайн-заказ.',
+                project5_title: 'Клиника',
+                project5_desc: 'Сайт клиники с услугами, профилями врачей и онлайн-регистрацией.',
+                project6_title: 'Корм для животных',
+                project6_desc: 'Сайт с информацией о продукции, пользе и советах по уходу.',
+                project7_title: 'Цифровое приглашение на свадьбу',
+                project7_desc: 'Интерактивный, отзывчивый сайт приглашений с RSVP.',
+                project8_title: 'Классификация зрелости бананов',
+                project8_desc: 'Модель KNN для автоматической классификации зрелости бананов по изображениям.',
+                project9_title: 'Бассейн Selo Asih',
+                project9_desc: 'Рекламный сайт бассейна Selo Asih с информацией об удобствах, галереей, расположением и билетами в интерактивной современной форме.',
+                contact_title_prefix: 'Связаться',
+                contact_title_gold: 'со мной',
+                contact_subtitle: 'Давайте работать вместе',
+                contact_paragraph: 'Открыт для новых проектов и идей.',
+                quick_title: 'Быстрое сообщение',
+                placeholder_name: 'Ваше имя',
+                placeholder_message: 'Ваше сообщение',
+                btn_send_message: 'Отправить сообщение',
+                whatsapp_template: (name, message) => `Привет, я ${name}. Хочу сказать: ${message}`,
+                skills_section_title: 'Технические навыки',
+                tech_section_title: 'Технологии',
+                skill_frontend: 'Фронтенд-разработка',
+                skill_backend: 'Бэкенд-разработка',
+                skill_uiux: 'UI/UX дизайн',
+                skill_database: 'Управление базами данных',
+                label_live_demo: 'Демо',
+                label_live_demo1: 'Демо 1',
+                label_live_demo2: 'Демо 2',
+            },
+            ja: {
+                nav_home: 'ホーム',
+                nav_about: '概要',
+                nav_skills: 'スキル',
+                nav_projects: 'プロジェクト',
+                nav_contact: '連絡先',
+                hero_greeting: 'こんにちは、私は',
+                hero_tagline: '最新技術と洗練されたデザインで魅力的なデジタル体験を創ります。',
+                btn_view_portfolio: 'ポートフォリオを見る',
+                btn_contact_me: 'お問い合わせ',
+                about_title_prefix: '私に',
+                about_title_gold: 'ついて',
+                about_subtitle: 'クリエイティブな開発者とデザイナー',
+                about_paragraph: '5年以上の経験を持ち、企業のアイデアを成功するデジタル製品に変えてきました。',
+                feature_clean_desc: '構造化され保守しやすいコード',
+                feature_modern_desc: '最新トレンドに沿ったデザイン',
+                skills_title_prefix: '私の',
+                skills_title_gold: 'スキル',
+                projects_title_prefix: '最新',
+                projects_title_gold: 'プロジェクト',
+                project1_desc: 'Zentrix Kreasi は、グラフィックデザインとモダンなウェブ開発の会社です。',
+                project2_title: 'オンラインゲーム',
+                project2_desc: '魅力的で挑戦的なオンラインゲームプラットフォーム。',
+                project3_title: '失読症診断のエキスパートシステム',
+                project3_desc: '子どもの失読症症状の早期発見を支援するエキスパートシステム。',
+                project4_title: 'ニットショップ',
+                project4_desc: '製品カタログ、詳細情報、簡単なオンライン注文が可能。',
+                project5_title: 'クリニック',
+                project5_desc: '医療サービス、医師プロフィール、オンライン登録を掲載。',
+                project6_title: '飼料',
+                project6_desc: '製品情報、利点、ケアのヒントを提供。',
+                project7_title: 'デジタル結婚招待状サイト',
+                project7_desc: 'インタラクティブでレスポンシブ、RSVP機能付き。',
+                project8_title: 'バナナ熟度分類',
+                project8_desc: '画像からバナナの熟度を自動分類するKNNモデル。',
+                project9_title: 'Selo Asih プール',
+                project9_desc: '施設、ギャラリー、場所、チケット情報を掲載した Selo Asih プールのプロモーションサイト（インタラクティブでモダン）。',
+                contact_title_prefix: 'お問い合わせ',
+                contact_title_gold: '先',
+                contact_subtitle: '一緒に働きましょう',
+                contact_paragraph: '新しいプロジェクトやアイデアのご相談を歓迎します。',
+                quick_title: 'クイックメッセージ',
+                placeholder_name: 'お名前',
+                placeholder_message: 'メッセージ',
+                btn_send_message: '送信',
+                whatsapp_template: (name, message) => `こんにちは、私は${name}です。次のことをお伝えします: ${message}`,
+                skills_section_title: 'テクニカルスキル',
+                tech_section_title: 'テクノロジー',
+                skill_frontend: 'フロントエンド開発',
+                skill_backend: 'バックエンド開発',
+                skill_uiux: 'UI/UXデザイン',
+                skill_database: 'データベース管理',
+                label_live_demo: 'ライブデモ',
+                label_live_demo1: 'ライブデモ 1',
+                label_live_demo2: 'ライブデモ 2',
+            },
+            ko: {
+                nav_home: '홈',
+                nav_about: '소개',
+                nav_skills: '기술',
+                nav_projects: '프로젝트',
+                nav_contact: '연락처',
+                hero_greeting: '안녕하세요, 저는',
+                hero_tagline: '최신 기술과 세련된 디자인으로 멋진 디지털 경험을 만듭니다.',
+                btn_view_portfolio: '포트폴리오 보기',
+                btn_contact_me: '문의하기',
+                about_title_prefix: '소개',
+                about_title_gold: '합니다',
+                about_subtitle: '창의적인 개발자 & 디자이너',
+                about_paragraph: '5년 이상의 경험으로 아이디어를 성공적인 디지털 제품으로 전환합니다.',
+                feature_clean_desc: '구조화되어 유지보수가 쉬운 코드',
+                feature_modern_desc: '최신 트렌드를 반영한 디자인',
+                skills_title_prefix: '나의',
+                skills_title_gold: '기술',
+                projects_title_prefix: '최신',
+                projects_title_gold: '프로젝트',
+                project1_desc: 'Zentrix Kreasi는 그래픽 디자인과 현대적인 웹 개발 회사입니다.',
+                project2_title: '온라인 게임',
+                project2_desc: '매력적이고 도전적인 온라인 게임 플랫폼.',
+                project3_title: '난독증 진단 전문가 시스템',
+                project3_desc: '어린이 난독증 증상의 조기 식별을 돕는 전문가 시스템.',
+                project4_title: '니트 상점',
+                project4_desc: '제품 카탈로그, 자세한 정보, 쉬운 온라인 주문.',
+                project5_title: '클리닉',
+                project5_desc: '의료 서비스, 의사 프로필, 온라인 등록 소개.',
+                project6_title: '사료',
+                project6_desc: '제품 정보, 이점 및 관리 팁 제공.',
+                project7_title: '디지털 청첩장 사이트',
+                project7_desc: '대화형, 반응형, RSVP 기능 포함.',
+                project8_title: '바나나 숙성도 분류',
+                project8_desc: '이미지에서 바나나 숙성도를 자동 분류하는 KNN 모델.',
+                project9_title: 'Selo Asih 수영장',
+                project9_desc: '시설, 갤러리, 위치, 티켓 정보를 갖춘 Selo Asih 수영장 홍보 웹사이트(인터랙티브하고 모던).',
+                contact_title_prefix: '연락',
+                contact_title_gold: '하기',
+                contact_subtitle: '함께 일해요',
+                contact_paragraph: '새로운 프로젝트와 아이디어에 대해 언제든 대화해요.',
+                quick_title: '빠른 메시지',
+                placeholder_name: '이름',
+                placeholder_message: '메시지',
+                btn_send_message: '메시지 보내기',
+                whatsapp_template: (name, message) => `안녕하세요, 저는 ${name}입니다. 다음을 전하고 싶습니다: ${message}`,
+                skills_section_title: '기술 스킬',
+                tech_section_title: '기술 스택',
+                skill_frontend: '프론트엔드 개발',
+                skill_backend: '백엔드 개발',
+                skill_uiux: 'UI/UX 디자인',
+                skill_database: '데이터베이스 관리',
+                label_live_demo: '라이브 데모',
+                label_live_demo1: '라이브 데모 1',
+                label_live_demo2: '라이브 데모 2',
+            },
+            ar: {
+                nav_home: 'الرئيسية',
+                nav_about: 'نبذة',
+                nav_skills: 'المهارات',
+                nav_projects: 'المشاريع',
+                nav_contact: 'اتصال',
+                hero_greeting: 'مرحبًا، أنا',
+                hero_tagline: 'أصنع تجارب رقمية رائعة بتقنيات حديثة وتصميم أنيق.',
+                btn_view_portfolio: 'عرض الأعمال',
+                btn_contact_me: 'تواصل معي',
+                about_title_prefix: 'نبذة',
+                about_title_gold: 'عني',
+                about_subtitle: 'مطوّر ومصمّم إبداعي',
+                about_paragraph: 'أملك خبرة تتجاوز 5 سنوات في التقنية وساعدت شركات على تحويل أفكارهم إلى منتجات رقمية ناجحة.',
+                feature_clean_desc: 'كود منظم وسهل الصيانة',
+                feature_modern_desc: 'تصاميم تواكب أحدث الاتجاهات',
+                skills_title_prefix: 'مهاراتي',
+                skills_title_gold: '',
+                projects_title_prefix: 'أحدث',
+                projects_title_gold: 'المشاريع',
+                project1_desc: 'Zentrix Kreasi شركة إبداعية في التصميم الجرافيكي وتطوير الويب الحديث.',
+                project2_title: 'لعبة على الإنترنت',
+                project2_desc: 'منصة ألعاب عبر الإنترنت ممتعة وتحديّة.',
+                project3_title: 'نظام خبير لتشخيص عسر القراءة',
+                project3_desc: 'تطبيق يساعد على التعرف المبكر على أعراض عسر القراءة لدى الأطفال.',
+                project4_title: 'متجر حياكة',
+                project4_desc: 'موقع بكتالوج منتجات ومعلومات تفصيلية وطلب عبر الإنترنت بسهولة.',
+                project5_title: 'عيادة',
+                project5_desc: 'موقع يعرض خدمات الرعاية الصحية وملفات الأطباء والتسجيل عبر الإنترنت.',
+                project6_title: 'أعلاف الحيوانات',
+                project6_desc: 'موقع يقدم معلومات المنتجات والفوائد ونصائح العناية للمزارعين.',
+                project7_title: 'دعوة زفاف رقمية',
+                project7_desc: 'موقع دعوات زفاف تفاعلي ومتجاوب مع RSVP.',
+                project8_title: 'تصنيف نضج الموز',
+                project8_desc: 'نموذج KNN لتصنيف درجة نضج الموز من الصور تلقائيًا.',
+                project9_title: 'مسبح سيلو أسِيح',
+                project9_desc: 'موقع ترويجي لمسبح سيلو أسِيح يقدّم المرافق والمعرض والموقع ومعلومات التذاكر بطريقة حديثة وتفاعلية.',
+                contact_title_prefix: 'اتصال',
+                contact_title_gold: 'بي',
+                contact_subtitle: 'لنَعْمَل معًا',
+                contact_paragraph: 'أنا دائمًا منفتح على مناقشة المشاريع والأفكار الجديدة.',
+                quick_title: 'رسالة سريعة',
+                placeholder_name: 'اسمك',
+                placeholder_message: 'رسالتك',
+                btn_send_message: 'أرسل الرسالة',
+                whatsapp_template: (name, message) => `مرحبًا، أنا ${name}. أود أن أقول: ${message}`,
+                skills_section_title: 'المهارات التقنية',
+                tech_section_title: 'التقنيات',
+                skill_frontend: 'تطوير الواجهة الأمامية',
+                skill_backend: 'تطوير الواجهة الخلفية',
+                skill_uiux: 'تصميم UI/UX',
+                skill_database: 'إدارة قواعد البيانات',
+                label_live_demo: 'عرض مباشر',
+                label_live_demo1: 'عرض مباشر 1',
+                label_live_demo2: 'عرض مباشر 2',
+            }
+        };
+
+        function applyTranslations(lang) {
+            const dict = translations[lang] || translations.en;
+            document.documentElement.setAttribute('lang', lang);
+            // Handle RTL for Arabic
+            if (lang === 'ar') {
+                document.documentElement.setAttribute('dir', 'rtl');
+            } else {
+                document.documentElement.removeAttribute('dir');
+            }
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const attr = el.getAttribute('data-i18n-attr');
+                const value = dict[key];
+                if (value !== undefined) {
+                    if (attr === 'placeholder') {
+                        el.setAttribute('placeholder', value);
+                    } else {
+                        el.textContent = value;
+                    }
+                }
+            });
+            // Sync select values
+            if (langSelect) langSelect.value = lang;
+            if (langSelectMobile) langSelectMobile.value = lang;
+            // Store preference
+            try { localStorage.setItem('lang', lang); } catch (e) {}
+        }
+
+        const langSelect = document.getElementById('languageSelect');
+        const langSelectMobile = document.getElementById('languageSelectMobile');
+        const savedLang = (() => { try { return localStorage.getItem('lang'); } catch (e) { return null; } })();
+        const supported = ['en','id','es','fr','de','pt','it','nl','ru','ja','ko','ar'];
+        const initialLang = (savedLang && supported.includes(savedLang)) ? savedLang : 'en';
+        applyTranslations(initialLang);
+        if (langSelect) {
+            langSelect.addEventListener('change', (e) => applyTranslations(e.target.value));
+        }
+        if (langSelectMobile) {
+            langSelectMobile.addEventListener('change', (e) => applyTranslations(e.target.value));
+        }
+
+        // Override WhatsApp text based on current language
+        function getCurrentLang() {
+            const l = document.documentElement.getAttribute('lang');
+            return supported.includes(l) ? l : 'en';
         }
         
         // Loader removed
